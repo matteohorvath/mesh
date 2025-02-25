@@ -1,7 +1,7 @@
 const BLOG = {
   title: "mesh.",
   author: "mesh.",
-  email: "web@gowmesh.io",
+  email: "web@growmesh.io",
   link: "https://growmesh.io",
   description: "This gonna be an awesome website.",
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
