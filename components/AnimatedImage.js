@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import Image from "next/image";
 // Utility function for conditional class names
 const cn = (...classes) => {
   return classes.filter(Boolean).join(" ");
@@ -8,6 +8,7 @@ const cn = (...classes) => {
 const AnimatedImage = ({ src, alt, className }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
+  const [imgSrc, setImgSrc] = useState(src);
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -32,18 +33,29 @@ const AnimatedImage = ({ src, alt, className }) => {
     };
   }, []);
 
+  const handleError = () => {
+    // Fallback to a default image if the specified one fails to load
+    setImgSrc("/images/placeholder.jpg");
+  };
+
   return (
-    <div className="relative overflow-hidden">
-      <img
-        ref={imageRef}
-        src={src}
+    <div
+      ref={imageRef}
+      className={cn("relative overflow-hidden w-full h-full", className)}
+    >
+      <Image
+        src={imgSrc}
         alt={alt}
+        fill
         className={cn(
-          "w-full h-full object-cover transition-all duration-700",
-          isInView && isLoaded ? "blur-0 scale-100" : "blur-sm scale-105",
-          className
+          "duration-700 ease-in-out object-cover",
+          isLoaded ? "scale-100 blur-0" : "scale-105 blur-2xl",
+          isInView ? "opacity-100" : "opacity-0"
         )}
-        onLoad={() => setIsLoaded(true)}
+        onLoadingComplete={() => setIsLoaded(true)}
+        onError={handleError}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        priority
       />
     </div>
   );

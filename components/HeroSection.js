@@ -14,9 +14,11 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col md:flex-row overflow-hidden w-full pt-20 md:pt-24 bg-mesh-dark">
-      {/* Left Column (Text) */}
-      <div className="w-full md:w-1/2 bg-mesh-dark flex flex-col justify-center items-start p-6 md:p-16 z-10">
+    <section className="relative h-screen w-full flex flex-col md:flex-row overflow-hidden bg-mesh-dark w-full">
+      {/* Right Column (Image) - Positioned behind on mobile, beside on desktop */}
+
+      {/* Left Column (Text) - Now positioned at bottom on mobile */}
+      <div className="w-full md:w-1/2 lg:w-2/5 bg-transparent md:bg-mesh-dark flex flex-col justify-end md:justify-center items-start p-6 pb-16 md:pb-6 md:p-16 z-10 h-full">
         <div className="max-w-xl">
           <h1
             className={cn(
@@ -48,15 +50,13 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Right Column (Image) */}
-      <div className="w-full md:w-1/2 h-[50vh] md:h-screen relative bg-mesh-dark">
+      <div className="absolute inset-0 md:relative w-full md:w-1/2 lg:w-3/5 h-screen">
+        <div className="absolute inset-0 bg-black/70 md:bg-black/50 md:hidden z-[1]"></div>
         <AnimatedImage
-          src="hero.png"
+          src="/images/hero.jpg"
           alt="mesh hackerspace with people working on computers"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center opacity-50"
         />
-        <div className="absolute inset-0 bg-black/20"></div>
       </div>
     </section>
   );

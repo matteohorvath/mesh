@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 // Utility function for conditional class names
 const cn = (...classes) => {
@@ -80,9 +81,12 @@ const AboutSection = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}
         >
-          <img
-            src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80"
-            alt="Diagram of mesh's approach to innovation"
+          <Image
+            src="/images/about.jpg"
+            width={1000}
+            ß
+            height={1000}
+            alt="Diagram of mesh's approach to talent development"
             className="w-full h-auto rounded-sm"
           />
         </div>

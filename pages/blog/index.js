@@ -28,10 +28,12 @@ export default function Blog({ postsToShow, page, showNext }) {
   return (
     <Container title={title} description={description}>
       <Navbar />
-      {postsToShow.map((post) => (
-        <BlogPost key={post.id} post={post} />
-      ))}
-      {showNext && <Pagination page={page} showNext={showNext} />}
+      <div className="mt-24">
+        {postsToShow.map((post) => (
+          <BlogPost key={post.id} post={post} />
+        ))}
+        {showNext && <Pagination page={page} showNext={showNext} />}
+      </div>
     </Container>
   );
 }
