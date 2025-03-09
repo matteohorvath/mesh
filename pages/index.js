@@ -1,50 +1,56 @@
-import { clientConfig } from "@/lib/server/config";
-import { getAllPosts, getPostBlocks } from "@/lib/notion";
-import { createHash } from "crypto";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useConfig } from "@/lib/config";
 import Container from "@/components/Container";
-import Post from "@/components/Post";
-import Comments from "@/components/Comments";
+
+// Import components from mesh-hacker-haven
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import CohortSection from "@/components/CohortSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import EventsSection from "@/components/EventsSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 export async function getStaticProps() {
-  const posts = await getAllPosts({ includePages: true });
-  const post = posts.find((t) => t.slug === "index");
-  if (!post) return { notFound: true };
-
-  const blockMap = await getPostBlocks(post.id);
-  const emailHash = createHash("md5")
-    .update(clientConfig.email)
-    .digest("hex")
-    .trim()
-    .toLowerCase();
-
   return {
-    props: { post, blockMap, emailHash },
+    props: {},
     revalidate: 1,
   };
 }
-export default function IndexPage({ post, blockMap, emailHash }) {
+
+export default function IndexPage() {
   const router = useRouter();
   const BLOG = useConfig();
+
+  useEffect(() => {
+    document.body.classList.add("smooth-scroll");
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove("smooth-scroll");
+    };
+  }, []);
 
   if (router.isFallback) return null;
 
   return (
     <Container
-      layout="blog"
-      title={post.title}
-      description={post.summary}
-      slug={post.slug}
-      type="article"
-      fullWidth={post.fullWidth}
+      layout="full"
+      title="Mesh Hacker Haven"
+      description="Community for hackers and builders"
+      fullWidth={true}
     >
-      <Post
-        post={post}
-        blockMap={blockMap}
-        emailHash={emailHash}
-        fullWidth={post.fullWidth}
-      />
+      <div className="min-h-screen bg-mesh-dark">
+        <Navbar />
+        <HeroSection />
+        <AboutSection />
+        <CohortSection />
+        <ProjectsSection />
+        <EventsSection />
+        <ContactSection />
+      </div>
     </Container>
   );
 }

@@ -26,6 +26,7 @@
     "dayjs": "^1.11.10",
     "feed": "^4.2.2",
     "gitalk": "^1.8.0",
+    "lucide-react": "^0.479.0",
     "mermaid": "^10.6.1",
     "next": "^14.0.2",
     "notion-client": "^6.16.0",
