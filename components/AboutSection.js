@@ -64,13 +64,10 @@ const AboutSection = () => {
             )}
           >
             <p>
-              We believe that humanity needs explorers and researchers who can
-              work independently and create in a result-oriented manner to drive
-              progress. We teach people how to plan and build every aspect of a
-              project from scratch to completion. mesh. provides resources,
-              mentors, contacts, frameworks and a place to passionate and
-              creative people, so they can delegate 100% of their focus to
-              building.
+              <b>mesh. talent launchpad</b> is for tech savvy builders who have
+              vision, drive and time to build. We are offering resources and
+              first steps in our engineer-led community, in exchange for
+              dedication.
             </p>
           </div>
         </div>
@@ -82,7 +79,7 @@ const AboutSection = () => {
           )}
         >
           <Image
-            src="/images/about.jpg"
+            src="/images/about.svg"
             width={1000}
             ß
             height={1000}
