@@ -38,7 +38,7 @@ export default function IndexPage() {
   return (
     <Container
       layout="full"
-      title="Mesh Hacker Haven"
+      title="mesh."
       description="Community for hackers and builders"
       fullWidth={true}
       main={true}

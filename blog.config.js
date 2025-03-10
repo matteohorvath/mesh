@@ -20,7 +20,25 @@ const BLOG = {
   ogImageGenerateURL: "https://og-image-craigary.vercel.app", // The link to generate OG image, don't end with a slash
   socialLink: "https://x.com/growmesh_io",
   seo: {
-    keywords: ["Blog", "Website", "Notion"],
+    keywords: [
+      "mesh.",
+      "growmesh",
+      "mesh",
+      "hacker",
+      "builder",
+      "talent",
+      "launchpad",
+      "cohort",
+      "community",
+      "hackerlab",
+      "budapest",
+      "startup",
+      "tech",
+      "innovation",
+      "entrepreneur",
+      "developer",
+      "designer",
+    ],
     googleSiteVerification: "", // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
