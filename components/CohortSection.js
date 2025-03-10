@@ -35,7 +35,7 @@ const CohortSection = () => {
     <section
       id="join"
       ref={sectionRef}
-      className="py-24 bg-mesh-dark text-white"
+      className="py-4 bg-mesh-dark text-white"
     >
       <div className="container mx-auto px-6">
         <div
@@ -96,7 +96,7 @@ const CohortSection = () => {
                 href="https://lu.ma/growmesh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center space-x-2 bg-purple-600 text-white py-3 px-8 text-lg font-mono hover:bg-purple-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black rounded-md border border-purple-300"
+                className="transition inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-mesh-blue to-mesh-teal text-white py-3 px-8 text-lg font-monda hover:from-mesh-teal hover:to-mesh-blue hover:text-mesh-dark transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-mesh-teal focus:ring-offset-2 focus:ring-offset-mesh-dark rounded-md  border-mesh-teal"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,7 @@ const CohortSection = () => {
                   <line x1="19" y1="8" x2="19" y2="14"></line>
                   <line x1="16" y1="11" x2="22" y2="11"></line>
                 </svg>
-                <span>Join here</span>
+                <span>Join the program</span>
               </a>
             </div>
           </div>

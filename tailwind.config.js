@@ -15,6 +15,8 @@ export default {
           DEFAULT: config.darkBackground || "#111827",
         },
         "mesh-dark": "#050505",
+        "mesh-blue": "#003BD2",
+        "mesh-teal": "#27EED6",
       },
       fontFamily: {
         sans: FONTS_SANS,
@@ -28,6 +30,9 @@ export default {
           "BlinkMacSystemFont",
           "sans-serif",
         ],
+      },
+      backgroundImage: {
+        "mesh-gradient": "linear-gradient(to right, #003BD2, #27EED6)",
       },
     },
   },

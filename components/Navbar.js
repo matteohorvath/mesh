@@ -79,16 +79,37 @@ const Navbar = () => {
         )}
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-          <Link href="/" className="text-white font-mono text-xl font-bold">
-            mesh.
+          <Link
+            href="/"
+            className="text-white font-monda font-bold text-xl tracking-wider"
+          >
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
+              mesh.
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
-            <NavLink href="/#projects">projects</NavLink>
-            <NavLink href="/#events">events</NavLink>
-            <NavLink href="/blog">blog</NavLink>
-            <NavLink href="/#contact">contact</NavLink>
+            <NavLink href="/#projects">
+              <span className="font-monda uppercase tracking-wider text-sm">
+                projects
+              </span>
+            </NavLink>
+            <NavLink href="/#events">
+              <span className="font-monda uppercase tracking-wider text-sm">
+                events
+              </span>
+            </NavLink>
+            <NavLink href="/blog">
+              <span className="font-monda uppercase tracking-wider text-sm">
+                blog
+              </span>
+            </NavLink>
+            <NavLink href="/#contact">
+              <span className="font-monda uppercase tracking-wider text-sm">
+                contact
+              </span>
+            </NavLink>
           </nav>
 
           {/* Mobile Menu Button - Highest z-index */}
@@ -115,22 +136,22 @@ const Navbar = () => {
       >
         <nav className="flex flex-col items-center space-y-8 p-8">
           <Link href="/#projects" onClick={handleNavClick}>
-            <span className="text-white text-lg font-mono tracking-wider uppercase hover:text-gray-300 transition-colors">
+            <span className="text-white text-lg font-monda uppercase tracking-wider hover:text-mesh-teal transition-colors">
               projects
             </span>
           </Link>
           <Link href="/#events" onClick={handleNavClick}>
-            <span className="text-white text-lg font-mono tracking-wider uppercase hover:text-gray-300 transition-colors">
+            <span className="text-white text-lg font-monda uppercase tracking-wider hover:text-mesh-teal transition-colors">
               events
             </span>
           </Link>
           <Link href="/blog" onClick={handleNavClick}>
-            <span className="text-white text-lg font-mono tracking-wider uppercase hover:text-gray-300 transition-colors">
+            <span className="text-white text-lg font-monda uppercase tracking-wider hover:text-mesh-teal transition-colors">
               blog
             </span>
           </Link>
           <Link href="/#contact" onClick={handleNavClick}>
-            <span className="text-white text-lg font-mono tracking-wider uppercase hover:text-gray-300 transition-colors">
+            <span className="text-white text-lg font-monda uppercase tracking-wider hover:text-mesh-teal transition-colors">
               contact
             </span>
           </Link>
