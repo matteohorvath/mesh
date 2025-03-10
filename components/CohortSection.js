@@ -8,6 +8,37 @@ const cn = (...classes) => {
 const CohortSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const [countdown, setCountdown] = useState("");
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      const startDate = new Date("April 4, 2025 17:00:00");
+      const now = new Date();
+      const diffTime = startDate - now;
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      const diffHours = Math.floor(
+        (diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const diffMinutes = Math.floor(
+        (diffTime % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const diffSeconds = Math.floor((diffTime % (1000 * 60)) / 1000);
+      setCountdown(
+        `${diffDays}:${diffHours.toString().padStart(2, "0")}:${diffMinutes
+          .toString()
+          .padStart(2, "0")}:${diffSeconds.toString().padStart(2, "0")}`
+      );
+    };
+
+    // Update immediately on mount
+    updateCountdown();
+
+    // Set up interval to update every second
+    const intervalId = setInterval(updateCountdown, 1000);
+
+    // Clean up interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -89,7 +120,7 @@ const CohortSection = () => {
               </ul>
             </div>
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
-              next cohort start: apr. 1
+              next cohort start: April 4th <br />({countdown})
             </h2>
             <div className="mt-8 flex justify-center">
               <a
