@@ -41,8 +41,9 @@ export default function IndexPage() {
       title="Mesh Hacker Haven"
       description="Community for hackers and builders"
       fullWidth={true}
+      main={true}
     >
-      <div className="min-h-screen bg-mesh-dark">
+      <div className="min-h-screen bg-mesh-dark w-full ">
         <Navbar />
         <HeroSection />
         <AboutSection />

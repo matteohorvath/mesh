@@ -71,22 +71,6 @@ const AboutSection = () => {
             </p>
           </div>
         </div>
-
-        <div
-          className={cn(
-            "mt-20 max-w-4xl mx-auto transition-all duration-700 delay-500",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          )}
-        >
-          <Image
-            src="/images/about.svg"
-            width={1000}
-            ß
-            height={1000}
-            alt="Diagram of mesh's approach to talent development"
-            className="w-full h-auto rounded-sm"
-          />
-        </div>
       </div>
     </section>
   );
