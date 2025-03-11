@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AnimatedImage from "./AnimatedImage";
-
+import TextAnimation from "./TextAnimation";
 // Utility function for conditional class names
 const cn = (...classes) => {
   return classes.filter(Boolean).join(" ");
@@ -9,17 +9,12 @@ const cn = (...classes) => {
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const words = ["ideas", "solutions", "projects", "dreams"];
+  const TEXT_STRINGS = ["company", "projects", "ideas", "reality"];
+  const WAIT_TIME = 2; // seconds
+  const STEP_TIME = 0.1; // seconds
 
   useEffect(() => {
     setIsLoaded(true);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prev) => (prev + 1) % words.length);
-    }, 1500);
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -42,11 +37,14 @@ const HeroSection = () => {
             >
               <span className="reveal-text reveal-delay-1 block">build</span>
               <span className="reveal-text reveal-delay-2 block">
-                <span
-                  key={currentWordIndex}
-                  className="rotate-animation text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal"
-                >
-                  {words[currentWordIndex]}
+                <span className="rotate-animation text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
+                  {
+                    <TextAnimation
+                      strings={TEXT_STRINGS}
+                      waitTime={WAIT_TIME}
+                      stepTime={STEP_TIME}
+                    />
+                  }
                 </span>
               </span>
               <span className="reveal-text reveal-delay-3 block">
