@@ -24,10 +24,11 @@ const SubscribeForm = () => {
         style={{
           margin: 0,
           borderRadius: 0,
-          backgroundColor: "transparent",
           borderImage:
             "linear-gradient(to right, var(--mesh-blue), var(--mesh-teal))",
           borderImageSlice: 1,
+          backgroundColor: "gray",
+          backgroundColor: "#1a1a1a",
         }}
         title="Subscribe to our newsletter"
       />

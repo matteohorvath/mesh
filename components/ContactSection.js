@@ -68,7 +68,7 @@ const ContactSection = () => {
             <div className="space-y-10">
               <div>
                 <h3 className="text-lg font-bold font-monda border-b border-gray-800 pb-2 mb-4">
-                  Matteo Horváth 🤘🏻
+                  Matteo Horváth 🤘🏻 Co-Founder
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
@@ -88,7 +88,7 @@ const ContactSection = () => {
 
               <div>
                 <h3 className="text-lg font-bold font-monda border-b border-gray-800 pb-2 mb-4">
-                  János Mózer 🤘🏻
+                  János Mózer 🤘🏻 Co-Founder
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
