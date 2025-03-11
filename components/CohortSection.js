@@ -99,9 +99,6 @@ const CohortSection = () => {
               </h3>
               <ul className="space-y-4 list-disc list-inside text-lg">
                 <li>
-                  Creators and problem-solvers who thrive on daily learning
-                </li>
-                <li>
                   Individuals driven by passion for innovation and building, not
                   just financial gain
                 </li>
