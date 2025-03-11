@@ -145,7 +145,7 @@ export default function TextAnimation({ strings, waitTime, stepTime }) {
   }, []); // Only run on mount
 
   return (
-    <span className="text-5xl md:text-6xl lg:text-7xl font-bold font-monda text-white leading-tight mb-8 relative overflow-hidden">
+    <span className="text-3xl md:text-4xl lg:text-5xl font-bold font-monda text-white leading-tight mb-8 relative overflow-hidden">
       <span className="rotate-animation text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
         {displayText}
       </span>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-
+import TextAnimation from "./TextAnimation";
 // Utility function for conditional class names
 const cn = (...classes) => {
   return classes.filter(Boolean).join(" ");
@@ -9,6 +9,10 @@ const cn = (...classes) => {
 const AboutSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+
+  const TEXT_STRINGS = ["company", "project", "idea", "reality"];
+  const WAIT_TIME = 2; // seconds
+  const STEP_TIME = 0.1; // seconds
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,11 +52,19 @@ const AboutSection = () => {
                 : "opacity-0 translate-y-10"
             )}
           >
-            mesh. is a hackerlab, where we
-            <br />
-            seek, invest in, and elevate
-            <br />
-            talent.
+            <span className="reveal-text reveal-delay-1 block">build the</span>
+            <span className="reveal-text reveal-delay-2 block">
+              <span className="rotate-animation text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
+                {
+                  <TextAnimation
+                    strings={TEXT_STRINGS}
+                    waitTime={WAIT_TIME}
+                    stepTime={STEP_TIME}
+                  />
+                }
+              </span>
+            </span>
+            <span className="reveal-text reveal-delay-3 block">you want.</span>
           </h2>
 
           <div

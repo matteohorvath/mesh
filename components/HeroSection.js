@@ -25,9 +25,6 @@ const HeroSection = () => {
         {/* Left Column (Text) - Now positioned at bottom on mobile */}
         <div className="w-full md:w-1/2 lg:w-2/5 bg-transparent md:bg-mesh-dark flex flex-col justify-end md:justify-center items-start p-6 pb-16 md:pb-6 md:p-16 z-10 h-full">
           <div className="max-w-xl">
-            <span className="inline-block font-monda uppercase tracking-widest text-xs font-bold text-mesh-teal mb-3 reveal-text reveal-delay-1">
-              mesh. hackerlab
-            </span>
             <h1
               className={cn(
                 "text-5xl md:text-6xl lg:text-7xl font-bold font-monda text-white leading-tight mb-8 relative overflow-hidden",
@@ -35,23 +32,11 @@ const HeroSection = () => {
                 "transition-opacity duration-500 delay-300"
               )}
             >
-              <span className="reveal-text reveal-delay-1 block">
-                build the
-              </span>
-              <span className="reveal-text reveal-delay-2 block">
-                <span className="rotate-animation text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
-                  {
-                    <TextAnimation
-                      strings={TEXT_STRINGS}
-                      waitTime={WAIT_TIME}
-                      stepTime={STEP_TIME}
-                    />
-                  }
-                </span>
-              </span>
-              <span className="reveal-text reveal-delay-3 block">
-                you want.
-              </span>
+              mesh. is a hackerlab
+              <br />
+              where we seek and develop
+              <br />
+              talent.
             </h1>
 
             <div
