@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useConfig } from "@/lib/config";
 import Container from "@/components/Container";
+import Head from "next/head";
 
 // Import components from mesh-hacker-haven
 import Navbar from "@/components/Navbar";
@@ -43,6 +44,22 @@ export default function IndexPage() {
       fullWidth={true}
       main={true}
     >
+      <Head>
+        {/* Preload the hero image */}
+        <link
+          rel="preload"
+          href="/images/hero.jpg"
+          as="image"
+          fetchpriority="high"
+        />
+        {/* Preconnect to any third-party domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </Head>
       <div className="min-h-screen bg-mesh-dark w-full ">
         <Navbar />
         <HeroSection />

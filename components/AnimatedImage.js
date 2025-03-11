@@ -5,13 +5,16 @@ const cn = (...classes) => {
   return classes.filter(Boolean).join(" ");
 };
 
-const AnimatedImage = ({ src, alt, className }) => {
+const AnimatedImage = ({ src, alt, className, isHero = false }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(isHero); // Hero images start as in view
   const [imgSrc, setImgSrc] = useState(src);
   const imageRef = useRef(null);
 
   useEffect(() => {
+    // Skip intersection observer for hero images
+    if (isHero) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -31,7 +34,7 @@ const AnimatedImage = ({ src, alt, className }) => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [isHero]);
 
   const handleError = () => {
     // Fallback to a default image if the specified one fails to load
@@ -49,13 +52,26 @@ const AnimatedImage = ({ src, alt, className }) => {
         fill
         className={cn(
           "duration-700 ease-in-out object-cover",
-          isLoaded ? "scale-100 blur-0" : "scale-105 blur-2xl",
+          // For hero images, don't apply initial blur and scale effects
+          isHero
+            ? isLoaded
+              ? "scale-100 blur-0"
+              : "scale-100 blur-0"
+            : isLoaded
+            ? "scale-100 blur-0"
+            : "scale-105 blur-2xl",
           isInView ? "opacity-100" : "opacity-0"
         )}
         onLoadingComplete={() => setIsLoaded(true)}
         onError={handleError}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        priority
+        sizes={
+          isHero
+            ? "100vw"
+            : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        }
+        priority={isHero} // Always set priority for hero images
+        fetchPriority={isHero ? "high" : "auto"}
+        loading={isHero ? "eager" : "lazy"}
       />
     </div>
   );

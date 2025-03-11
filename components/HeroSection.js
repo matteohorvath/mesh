@@ -9,7 +9,7 @@ const cn = (...classes) => {
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const TEXT_STRINGS = ["company", "projects", "ideas", "reality"];
+  const TEXT_STRINGS = ["company", "project", "idea", "reality"];
   const WAIT_TIME = 2; // seconds
   const STEP_TIME = 0.1; // seconds
 
@@ -35,7 +35,9 @@ const HeroSection = () => {
                 "transition-opacity duration-500 delay-300"
               )}
             >
-              <span className="reveal-text reveal-delay-1 block">build</span>
+              <span className="reveal-text reveal-delay-1 block">
+                build the
+              </span>
               <span className="reveal-text reveal-delay-2 block">
                 <span className="rotate-animation text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
                   {
@@ -87,6 +89,7 @@ const HeroSection = () => {
             src="/images/hero.jpg"
             alt="mesh hackerspace with people working on computers"
             className="w-full h-full object-cover object-center opacity-50"
+            isHero={true}
           />
         </div>
       </section>
