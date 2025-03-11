@@ -65,9 +65,10 @@ const AboutSection = () => {
           >
             <p>
               <b>mesh. talent launchpad</b> is for tech savvy builders who have
-              vision, drive and time to build. We are offering resources and
-              first steps in our engineer-led community, in exchange for
-              dedication.
+              vision, drive and time to build. We are offering office space,
+              tools, an inspiring community, mentors, teammates, a platform to
+              test yourself, a place to showcase your work, and first steps in
+              our engineer-led community, in exchange for dedication.
             </p>
           </div>
         </div>
