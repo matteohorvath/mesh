@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 // Utility function for conditional class names
 const cn = (...classes) => {
@@ -8,14 +9,40 @@ const cn = (...classes) => {
 };
 
 const NavLink = ({ href, children, onClick }) => {
+  const router = useRouter();
+  const isInternalLink = href.startsWith("/#");
+
+  const handleClick = (e) => {
+    if (isInternalLink) {
+      e.preventDefault();
+
+      // Extract the target ID from the href
+      const targetId = href.substring(2);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // Smooth scroll to the element
+        targetElement.scrollIntoView({ behavior: "smooth" });
+
+        // Update URL without causing a jump
+        window.history.pushState(null, null, href);
+      }
+
+      // Call the original onClick handler if provided
+      if (onClick) onClick();
+    } else if (onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <a
+    <Link
       href={href}
       className="text-white text-sm font-mono tracking-wider uppercase hover:text-gray-300 transition-colors duration-300 link-underline"
-      onClick={onClick}
+      onClick={handleClick}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 
@@ -110,6 +137,11 @@ const Navbar = () => {
                 contact
               </span>
             </NavLink>
+            <NavLink href="/#about">
+              <span className="font-monda uppercase tracking-wider text-sm bg-gradient-to-r from-mesh-blue to-mesh-teal px-4 py-2 rounded-md text-white hover:from-mesh-teal hover:to-mesh-blue transition-all duration-300">
+                join us
+              </span>
+            </NavLink>
           </nav>
 
           {/* Mobile Menu Button - Highest z-index */}
@@ -135,26 +167,26 @@ const Navbar = () => {
         onClick={handleOverlayClick}
       >
         <nav className="flex flex-col items-center space-y-8 p-8">
-          <Link href="/#projects" onClick={handleNavClick}>
+          <NavLink href="/#projects" onClick={handleNavClick}>
             <span className="text-white text-lg font-monda uppercase tracking-wider hover:text-mesh-teal transition-colors">
               projects
             </span>
-          </Link>
-          <Link href="/#events" onClick={handleNavClick}>
+          </NavLink>
+          <NavLink href="/#events" onClick={handleNavClick}>
             <span className="text-white text-lg font-monda uppercase tracking-wider hover:text-mesh-teal transition-colors">
               events
             </span>
-          </Link>
-          <Link href="/blog" onClick={handleNavClick}>
+          </NavLink>
+          <NavLink href="/blog" onClick={handleNavClick}>
             <span className="text-white text-lg font-monda uppercase tracking-wider hover:text-mesh-teal transition-colors">
               blog
             </span>
-          </Link>
-          <Link href="/#contact" onClick={handleNavClick}>
+          </NavLink>
+          <NavLink href="/#contact" onClick={handleNavClick}>
             <span className="text-white text-lg font-monda uppercase tracking-wider hover:text-mesh-teal transition-colors">
               contact
             </span>
-          </Link>
+          </NavLink>
         </nav>
       </div>
     </>

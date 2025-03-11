@@ -65,8 +65,16 @@ const HeroSection = () => {
               <a
                 href="#about"
                 className="inline-flex items-center bg-gradient-to-r from-mesh-blue to-mesh-teal text-white py-4 px-8 text-lg font-mono uppercase tracking-wider hover:from-mesh-blue hover:to-mesh-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-mesh-teal focus:ring-offset-2 focus:ring-offset-black rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const aboutSection = document.getElementById("about");
+                  if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: "smooth" });
+                    window.history.pushState(null, null, "#about");
+                  }
+                }}
               >
-                <span>join us</span>
+                <span>next cohort</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 ml-2"
@@ -87,7 +95,7 @@ const HeroSection = () => {
           <div className="absolute inset-0 bg-black/70 md:bg-black/50 md:hidden z-[1]"></div>
           <AnimatedImage
             src="/images/hero.jpg"
-            alt="mesh hackerspace with people working on computers"
+            alt="mesh. hackerspace with people working on computers"
             className="w-full h-full object-cover object-center opacity-50"
             isHero={true}
           />

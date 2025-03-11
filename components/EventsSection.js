@@ -47,7 +47,7 @@ const EventsSection = () => {
             width=""
             height="400"
             style={{ borderRadius: "4px", overflow: "hidden" }}
-            title="Mesh Events Calendar"
+            title="Mesh. Events Calendar"
             className="mt-4"
           ></iframe>
         </div>

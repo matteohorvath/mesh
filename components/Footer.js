@@ -35,9 +35,7 @@ const Footer = () => {
                   mesh.
                 </span>
               </h2>
-              <p className="text-gray-400 text-sm">
-                Tell others about mesh and builders
-              </p>
+              <p className="text-gray-400 text-sm">Dream it. build it.</p>
             </div>
 
             <SubscribeForm />

@@ -26,11 +26,46 @@ export default function IndexPage() {
   const BLOG = useConfig();
 
   useEffect(() => {
-    document.body.classList.add("smooth-scroll");
+    // Handle hash links for smooth scrolling
+    const handleHashChange = () => {
+      const { hash } = window.location;
+      if (hash) {
+        // Wait a bit for the page to fully load
+        setTimeout(() => {
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      }
+    };
 
-    // Cleanup on unmount
+    // Initial check for hash in URL
+    if (window.location.hash) {
+      handleHashChange();
+    }
+
+    // Add event listener for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+
+    // Add smooth scrolling to all internal links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+
+          // Update URL hash without jumping
+          window.history.pushState(null, null, `#${targetId}`);
+        }
+      });
+    });
+
     return () => {
-      document.body.classList.remove("smooth-scroll");
+      window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
 
@@ -59,15 +94,36 @@ export default function IndexPage() {
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        {/* Add smooth scroll behavior via CSS */}
+        <style>{`
+          html {
+            scroll-behavior: smooth;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            html {
+              scroll-behavior: auto;
+            }
+          }
+        `}</style>
       </Head>
-      <div className="min-h-screen bg-mesh-dark w-full ">
+      <div className="min-h-screen bg-mesh-dark w-full">
         <Navbar />
         <HeroSection />
-        <AboutSection />
-        <CohortSection />
-        <ProjectsSection />
-        <EventsSection />
-        <ContactSection />
+        <div id="about">
+          <AboutSection />
+        </div>
+        <div id="cohort">
+          <CohortSection />
+        </div>
+        <div id="projects">
+          <ProjectsSection />
+        </div>
+        <div id="events">
+          <EventsSection />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
       </div>
     </Container>
   );
