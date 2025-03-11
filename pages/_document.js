@@ -143,7 +143,7 @@ class MyDocument extends Document {
           `}
           </style>
         </Head>
-        <body className="bg-day dark:bg-night">
+        <body className="bg-mesh-dark">
           <Main />
           <NextScript />
         </body>
