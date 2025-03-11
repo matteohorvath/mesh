@@ -76,9 +76,6 @@ const CohortSection = () => {
           )}
         >
           <div className="space-y-10">
-            <h2 className="text-left text-3xl md:text-4xl font-bold mb-16">
-              mesh. talent launchpad
-            </h2>
             <div
               className={cn(
                 "mt-20 max-w-4xl mx-auto transition-all duration-700 delay-500",

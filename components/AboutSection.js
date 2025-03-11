@@ -35,7 +35,7 @@ const AboutSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-24 bg-mesh-dark text-white"
+      className="pt-24 bg-mesh-dark text-white"
       id="about"
     >
       <div className="container mx-auto px-6">
