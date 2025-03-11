@@ -31,7 +31,7 @@ const HeroSection = () => {
         <div className="w-full md:w-1/2 lg:w-2/5 bg-transparent md:bg-mesh-dark flex flex-col justify-end md:justify-center items-start p-6 pb-16 md:pb-6 md:p-16 z-10 h-full">
           <div className="max-w-xl">
             <span className="inline-block font-monda uppercase tracking-widest text-xs font-bold text-mesh-teal mb-3 reveal-text reveal-delay-1">
-              mesh hackerspace
+              mesh. hackerlab
             </span>
             <h1
               className={cn(
