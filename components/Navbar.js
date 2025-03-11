@@ -137,11 +137,15 @@ const Navbar = () => {
                 contact
               </span>
             </NavLink>
-            <NavLink href="/#about">
+            <Link
+              href="https://lu.ma/ovp4skct"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="font-monda uppercase tracking-wider text-sm bg-gradient-to-r from-mesh-blue to-mesh-teal px-4 py-2 rounded-md text-white hover:from-mesh-teal hover:to-mesh-blue transition-all duration-300">
                 join us
               </span>
-            </NavLink>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button - Highest z-index */}

@@ -59,9 +59,6 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block font-monda uppercase tracking-widest text-sm font-bold text-mesh-teal mb-3">
-              Our Projects
-            </span>
             <h2
               className={cn(
                 "text-center text-3xl md:text-5xl font-bold font-monda mb-6 transition-all duration-700",

@@ -87,29 +87,59 @@ const CohortSection = () => {
               <Image
                 src="/images/about.svg"
                 width={1000}
-                ß
                 height={1000}
                 alt="Diagram of mesh's approach to talent development"
                 className="w-full h-auto rounded-sm"
               />
             </div>
-            <div className="space-y-4">
-              <h3 className="text-2xl md:text-3xl font-bold">
-                Who are we looking for?
-              </h3>
-              <ul className="space-y-4 list-disc list-inside text-lg">
-                <li>
-                  Individuals driven by passion for innovation and building, not
-                  just financial gain
-                </li>
-                <li>Technical talent in software, hardware, or deep-tech</li>
-                <li>
-                  Individual founders are accepted, but we encourage team
-                  applications
-                </li>
-                <li>Between 16 and 28 years old</li>
-              </ul>
+
+            {/* Two-column layout for "What You Get" and "Who We're Looking For" */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              {/* Left Column - What You Get */}
+              <div className="space-y-4 p-6 bg-black/20 rounded-lg border border-mesh-teal/20 hover:border-mesh-teal/40 transition-all duration-300">
+                <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
+                  What You Get
+                </h3>
+                <ul className="space-y-4 list-disc list-inside text-lg">
+                  <li>
+                    Access to a community of like-minded builders and hackers
+                  </li>
+                  <li>
+                    Mentorship from experienced founders and industry experts
+                  </li>
+                  <li>Workspace and resources to build your projects</li>
+                  <li>Networking opportunities with investors and partners</li>
+                  <li>Technical workshops and skill development sessions</li>
+                  <li>
+                    Potential funding opportunities for promising projects
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right Column - Who We're Looking For */}
+              <div className="space-y-4 p-6 bg-black/20 rounded-lg border border-mesh-teal/20 hover:border-mesh-teal/40 transition-all duration-300">
+                <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
+                  Who We&apos;re Looking For
+                </h3>
+                <ul className="space-y-4 list-disc list-inside text-lg">
+                  <li>
+                    Individuals driven by passion for innovation and building,
+                    not just financial gain
+                  </li>
+                  <li>Technical talent in software, hardware, or deep-tech</li>
+                  <li>
+                    Individual founders are accepted, but we encourage team
+                    applications
+                  </li>
+                  <li>Between 16 and 28 years old</li>
+                  <li>
+                    Commitment to collaborate and contribute to the community
+                  </li>
+                  <li>Problem solvers with a growth mindset</li>
+                </ul>
+              </div>
             </div>
+
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
               next cohort start: April 4th <br />({countdown})
             </h2>
