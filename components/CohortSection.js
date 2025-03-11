@@ -100,13 +100,10 @@ const CohortSection = () => {
               <h3 className="text-2xl md:text-3xl font-bold">
                 Who are we looking for?
               </h3>
-              <p className="text-lg">
-                If you&apos;re someone who wakes up excited to build new things,
-                solve problems, and learn something new every day, we are
-                interested in you.
-              </p>
-
-              <ul className="space-y-4 mt-6 list-disc list-inside text-lg">
+              <ul className="space-y-4 list-disc list-inside text-lg">
+                <li>
+                  Creators and problem-solvers who thrive on daily learning
+                </li>
                 <li>
                   Individuals driven by passion for innovation and building, not
                   just financial gain

@@ -36,7 +36,7 @@ const Footer = () => {
                 </span>
               </h2>
               <p className="text-gray-400 text-sm">
-                © Tell others about mesh and builders
+                Tell others about mesh and builders
               </p>
             </div>
 
