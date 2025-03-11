@@ -85,6 +85,7 @@ const ProjectsSection = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                key={project.name}
               >
                 <div
                   key={project.name}
