@@ -62,12 +62,12 @@ const ContactSection = () => {
             )}
           >
             <p className="text-lg font-monda mb-4">
-              Around in Budapest? Let's grab a coffee! ☕️
+              Around in Budapest? Let&apos;s grab a coffee! ☕️
             </p>
             <p className="text-gray-400">
               We love meeting new people and discussing exciting ideas.
               <br />
-              Drop us a message and let's connect!
+              Drop us a message and let&apos;s connect!
             </p>
           </div>
 
