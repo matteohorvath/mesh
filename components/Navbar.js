@@ -38,7 +38,7 @@ const NavLink = ({ href, children, onClick }) => {
   return (
     <Link
       href={href}
-      className="text-white text-sm font-mono tracking-wider uppercase hover:text-gray-300 transition-colors duration-300 link-underline"
+      className="text-white text-sm font-monda tracking-wider uppercase hover:text-gray-300 transition-colors duration-300 link-underline"
       onClick={handleClick}
     >
       {children}
@@ -191,6 +191,15 @@ const Navbar = () => {
               contact
             </span>
           </NavLink>
+          <Link
+            href="https://lu.ma/ovp4skct"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="font-monda uppercase tracking-wider text-sm bg-gradient-to-r from-mesh-blue to-mesh-teal px-4 py-2 rounded-md text-white hover:from-mesh-teal hover:to-mesh-blue transition-all duration-300">
+              join us
+            </span>
+          </Link>
         </nav>
       </div>
     </>

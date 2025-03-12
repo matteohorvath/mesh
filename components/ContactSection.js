@@ -41,9 +41,6 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block font-monda uppercase tracking-widest text-sm font-bold text-mesh-teal mb-3">
-              Contact Us
-            </span>
             <h2
               className={cn(
                 "text-center text-3xl md:text-5xl font-bold font-monda mb-6 transition-all duration-700",
@@ -55,6 +52,23 @@ const ContactSection = () => {
               Get in touch! 🤙🏻
             </h2>
             <div className="mx-auto w-24 h-1 bg-gradient-to-r from-mesh-blue to-mesh-teal rounded-full mb-8"></div>
+          </div>
+          <div
+            className={cn(
+              "text-center mb-12 transition-all duration-700 delay-200",
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            )}
+          >
+            <p className="text-lg font-monda mb-4">
+              Around in Budapest? Let's grab a coffee! ☕️
+            </p>
+            <p className="text-gray-400">
+              We love meeting new people and discussing exciting ideas.
+              <br />
+              Drop us a message and let's connect!
+            </p>
           </div>
 
           <div
@@ -74,13 +88,13 @@ const ContactSection = () => {
                   <div className="flex items-start space-x-3">
                     <Mail size={20} className="mt-1 text-mesh-teal" />
                     <div>
-                      <p className="font-mono">matteo.horvath@growmesh.io</p>
+                      <p className="font-monda">matteo.horvath@growmesh.io</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Phone size={20} className="mt-1 text-mesh-teal" />
                     <div>
-                      <p className="font-mono">+36 30 746 5434</p>
+                      <p className="font-monda">+36 30 746 5434</p>
                     </div>
                   </div>
                 </div>
@@ -94,13 +108,13 @@ const ContactSection = () => {
                   <div className="flex items-start space-x-3">
                     <Mail size={20} className="mt-1 text-mesh-teal" />
                     <div>
-                      <p className="font-mono">janos.mozer@growmesh.io</p>
+                      <p className="font-monda">janos.mozer@growmesh.io</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Phone size={20} className="mt-1 text-mesh-teal" />
                     <div>
-                      <p className="font-mono">+36 20 286 4121</p>
+                      <p className="font-monda">+36 20 286 4121</p>
                     </div>
                   </div>
                 </div>
@@ -118,7 +132,7 @@ const ContactSection = () => {
                     className="mt-1 flex-shrink-0 text-mesh-teal"
                   />
                   <div>
-                    <p className="font-mono">
+                    <p className="font-monda">
                       Bartók Béla út 51., 1114 Budapest, Hungary
                     </p>
                   </div>
@@ -142,7 +156,7 @@ const ContactSection = () => {
                   href="https://discord.gg/yMf868g6cU"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-mesh-blue to-mesh-teal text-white py-3 px-8 text-lg font-mono hover:from-mesh-blue hover:to-mesh-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-mesh-teal focus:ring-offset-2 focus:ring-offset-black rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-mesh-blue to-mesh-teal text-white py-3 px-8 text-lg font-monda hover:from-mesh-blue hover:to-mesh-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-mesh-teal focus:ring-offset-2 focus:ring-offset-black rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

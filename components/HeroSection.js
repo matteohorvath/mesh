@@ -49,7 +49,7 @@ const HeroSection = () => {
             >
               <a
                 href="#about"
-                className="inline-flex items-center bg-gradient-to-r from-mesh-blue to-mesh-teal text-white py-4 px-8 text-lg font-mono uppercase tracking-wider hover:from-mesh-blue hover:to-mesh-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-mesh-teal focus:ring-offset-2 focus:ring-offset-black rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center bg-gradient-to-r from-mesh-blue to-mesh-teal text-white py-4 px-8 text-lg font-monda uppercase tracking-wider hover:from-mesh-blue hover:to-mesh-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-mesh-teal focus:ring-offset-2 focus:ring-offset-black rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 onClick={(e) => {
                   e.preventDefault();
                   const aboutSection = document.getElementById("about");
