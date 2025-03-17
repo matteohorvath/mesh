@@ -109,7 +109,7 @@ const CohortSection = () => {
                   </li>
                   <li>Workspace and resources to build your projects</li>
                   <li>Networking opportunities with investors and partners</li>
-                  <li>Technical workshops and skill development sessions</li>
+
                   <li>
                     Potential funding opportunities for promising projects
                   </li>
