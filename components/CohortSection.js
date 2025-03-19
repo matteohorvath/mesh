@@ -145,7 +145,7 @@ const CohortSection = () => {
             </h2>
             <div className="mt-8 flex justify-center">
               <a
-                href="https://lu.ma/ovp4skct"
+                href="https://lu.ma/ovp4skct?utm_source=mesh-website-cohort-section"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-mesh-blue to-mesh-teal text-white py-3 px-8 text-lg font-monda hover:from-mesh-teal hover:to-mesh-blue hover:text-mesh-dark transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-mesh-teal focus:ring-offset-2 focus:ring-offset-mesh-dark rounded-md  border-mesh-teal"

@@ -138,7 +138,7 @@ const Navbar = () => {
               </span>
             </NavLink>
             <Link
-              href="https://lu.ma/ovp4skct"
+              href="https://lu.ma/ovp4skct?utm_source=mesh-website-navbar"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -192,7 +192,7 @@ const Navbar = () => {
             </span>
           </NavLink>
           <Link
-            href="https://lu.ma/ovp4skct"
+            href="https://lu.ma/ovp4skct?utm_source=mesh-website-navbar-mobile"
             target="_blank"
             rel="noopener noreferrer"
           >
