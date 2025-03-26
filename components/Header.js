@@ -19,10 +19,7 @@ const NavBar = () => {
         {links.map(
           (link) =>
             link.show && (
-              <li
-                key={link.id}
-                className="block ml-4 text-black dark:text-gray-50 nav"
-              >
+              <li key={link.id} className="block ml-4 text-gray-50 nav">
                 <Link href={link.to} target={link.external ? "_blank" : null}>
                   {link.name}
                 </Link>
@@ -140,7 +137,7 @@ const HeaderName = forwardRef(function HeaderName(
   return (
     <p
       ref={ref}
-      className="header-name ml-2 font-medium text-l dark:text-gray-300  cursor-pointer grid-rows-1 grid-cols-1 items-center"
+      className="header-name ml-2 font-medium text-l text-gray-300 cursor-pointer grid-rows-1 grid-cols-1 items-center"
       onClick={onClick}
     >
       {postTitle && (

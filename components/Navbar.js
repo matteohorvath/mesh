@@ -11,21 +11,33 @@ const cn = (...classes) => {
 const NavLink = ({ href, children, onClick }) => {
   const router = useRouter();
   const isInternalLink = href.startsWith("/#");
+  const isHomePage = router.pathname === "/";
 
   const handleClick = (e) => {
     if (isInternalLink) {
       e.preventDefault();
 
-      // Extract the target ID from the href
-      const targetId = href.substring(2);
-      const targetElement = document.getElementById(targetId);
-
-      if (targetElement) {
-        // Smooth scroll to the element
-        targetElement.scrollIntoView({ behavior: "smooth" });
-
-        // Update URL without causing a jump
-        window.history.pushState(null, null, href);
+      if (!isHomePage) {
+        // If we're not on the home page, navigate to home first
+        router.push("/").then(() => {
+          // After navigation, scroll to the target section
+          setTimeout(() => {
+            const targetId = href.substring(2);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: "smooth" });
+              window.history.pushState(null, null, href);
+            }
+          }, 100);
+        });
+      } else {
+        // If we're already on the home page, just scroll
+        const targetId = href.substring(2);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState(null, null, href);
+        }
       }
 
       // Call the original onClick handler if provided
