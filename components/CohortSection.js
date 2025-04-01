@@ -154,7 +154,7 @@ const CohortSection = () => {
 
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
               next cohort start: April 4th <br />
-              20 teams (8 spots left)
+              20 teams (2 spots left)
               <br />
               deadline: {countdown}
             </h2>
