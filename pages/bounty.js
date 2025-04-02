@@ -76,7 +76,7 @@ export default function BountyPage() {
                 <iframe
                   src="https://growmesh.notion.site/ebd/1c93052c96d280e7ace7d677f22f41e8"
                   width="100%"
-                  height="1400"
+                  height="1650"
                   frameborder="0"
                   allowfullscreen
                   title="Submit a Project Form"
