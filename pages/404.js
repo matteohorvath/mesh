@@ -1,7 +1,7 @@
 import { useLocale } from "@/lib/locale";
 import Container from "@/components/Container";
 import Navbar from "@/components/Navbar";
-
+import Link from "next/link";
 export default function Page404() {
   const locale = useLocale();
 
