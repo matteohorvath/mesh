@@ -76,7 +76,7 @@ const CohortSection = () => {
           )}
         >
           <div className="space-y-10">
-            <div
+            {/*<div
               className={cn(
                 "mt-20 max-w-4xl mx-auto transition-all duration-700 delay-500",
                 isVisible
@@ -94,9 +94,9 @@ const CohortSection = () => {
             </div>
 
             {/* Two-column layout for "Why Join?" and "We're Looking For You If" */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {/*<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               {/* Left Column - Why Join? */}
-              <div className="space-y-4 p-6 bg-black/20 rounded-lg border border-mesh-teal/20 hover:border-mesh-teal/40 transition-all duration-300">
+            {/* <div className="space-y-4 p-6 bg-black/20 rounded-lg border border-mesh-teal/20 hover:border-mesh-teal/40 transition-all duration-300">
                 <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
                   Why Join?
                 </h3>
@@ -123,7 +123,7 @@ const CohortSection = () => {
               </div>
 
               {/* Right Column - We're Looking For You If */}
-              <div className="space-y-4 p-6 bg-black/20 rounded-lg border border-mesh-teal/20 hover:border-mesh-teal/40 transition-all duration-300">
+            {/*<div className="space-y-4 p-6 bg-black/20 rounded-lg border border-mesh-teal/20 hover:border-mesh-teal/40 transition-all duration-300">
                 <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
                   We&apos;re Looking For You If
                 </h3>
@@ -151,14 +151,14 @@ const CohortSection = () => {
                 </ul>
               </div>
             </div>
-
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
               next cohort start: April 4th <br />
               20 teams (2 spots left)
               <br />
               deadline: {countdown}
             </h2>
-            <div className="mt-8 flex justify-center">
+            */}
+            {/*<div className="mt-8 flex justify-center">
               <a
                 href="https://lu.ma/ovp4skct?utm_source=mesh-website-cohort-section"
                 target="_blank"
@@ -184,7 +184,7 @@ const CohortSection = () => {
                 </svg>
                 <span>Join now</span>
               </a>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>

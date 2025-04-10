@@ -149,11 +149,7 @@ const Navbar = () => {
                 contact
               </span>
             </NavLink>
-            <Link
-              href="https://lu.ma/ovp4skct?utm_source=mesh-website-navbar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="#about" rel="noopener noreferrer">
               <span className="font-monda uppercase tracking-wider text-sm bg-gradient-to-r from-mesh-blue to-mesh-teal px-4 py-2 rounded-md text-white hover:from-mesh-teal hover:to-mesh-blue transition-all duration-300">
                 join us
               </span>
@@ -203,11 +199,7 @@ const Navbar = () => {
               contact
             </span>
           </NavLink>
-          <Link
-            href="https://lu.ma/ovp4skct?utm_source=mesh-website-navbar-mobile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="#about" rel="noopener noreferrer">
             <span className="font-monda uppercase tracking-wider text-sm bg-gradient-to-r from-mesh-blue to-mesh-teal px-4 py-2 rounded-md text-white hover:from-mesh-teal hover:to-mesh-blue transition-all duration-300">
               join us
             </span>

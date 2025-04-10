@@ -48,18 +48,18 @@ const HeroSection = () => {
               )}
             >
               <a
-                href="#about"
+                href="#contact"
                 className="inline-flex items-center bg-gradient-to-r from-mesh-blue to-mesh-teal text-white py-4 px-8 text-lg font-monda uppercase tracking-wider hover:from-mesh-blue hover:to-mesh-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-mesh-teal focus:ring-offset-2 focus:ring-offset-black rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 onClick={(e) => {
                   e.preventDefault();
-                  const aboutSection = document.getElementById("about");
+                  const aboutSection = document.getElementById("contact");
                   if (aboutSection) {
                     aboutSection.scrollIntoView({ behavior: "smooth" });
-                    window.history.pushState(null, null, "#about");
+                    window.history.pushState(null, null, "#contact");
                   }
                 }}
               >
-                <span>next cohort</span>
+                <span>get in touch</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 ml-2"
