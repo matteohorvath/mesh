@@ -84,8 +84,18 @@ const AboutSection = () => {
               dedication.
               <br />
               <br />
-              If you want to join, reach out to us{" "}
+              If you want to talk to us, reach out to us{" "}
               <a href="#contact" className="underline">
+                here
+              </a>
+              <br />
+              If you want to join, fill out the form{" "}
+              <a
+                href="https://growmesh.notion.site/5af905687aec4e759c55744f5c08c7eb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
                 here
               </a>
             </p>
