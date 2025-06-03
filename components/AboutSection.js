@@ -82,46 +82,64 @@ const AboutSection = () => {
               </h3>
             </div>
 
-            <div className="flex flex-col md:flex-row items-center md:items-center justify-around space-y-8 md:space-y-0 md:space-x-8"> {/* Changed md:items-start to md:items-center */}
-              {/* What we propose */}
-              <div className="w-full md:w-1/3 p-6 bg-mesh-dark-secondary rounded-lg shadow-lg text-center">
-                <h4 className="text-xl font-semibold text-mesh-teal mb-4 uppercase tracking-wider">
-                  What we propose
-                </h4>
-                <ul className="space-y-2 text-gray-300 text-left">
-                  <li>Office space</li>
-                  <li>Tools</li>
-                  <li>A vibrant community</li>
-                  <li>Mentorship</li>
-                  <li>Team collaboration</li>
-                  <li>A testing platform to showcase your work</li>
-                  <li>Initial steps within our engineer-led community</li>
-                </ul>
+            {/* New 2-Row Structure */}
+            <div className="space-y-8"> {/* Provides vertical spacing between the title row and content row */}
+              {/* Row 1: Titles */}
+              <div className="flex flex-col md:flex-row text-center md:text-left">
+                <div className="w-full md:w-1/3 px-2 md:px-4"> {/* Adjusted padding */}
+                  <h4 className="text-xl font-semibold text-mesh-teal uppercase tracking-wider">
+                    What we propose
+                  </h4>
+                </div>
+                <div className="w-full md:w-1/3 px-2 md:px-4 hidden md:block">
+                  {/* Spacer for the middle column's title area (circle column) */}
+                </div>
+                <div className="w-full md:w-1/3 px-2 md:px-4"> {/* Adjusted padding */}
+                  <h4 className="text-xl font-semibold text-mesh-teal uppercase tracking-wider">
+                    What we require
+                  </h4>
+                </div>
               </div>
 
-              {/* Central Element */}
-              <div className="w-full md:w-auto flex items-center justify-center">
-                {/* Outer div for gradient border */}
-                <div className="w-48 h-48 p-1 rounded-full bg-gradient-to-r from-mesh-teal to-mesh-blue flex items-center justify-center shadow-lg">
-                  {/* Inner div for background and content */}
-                  <div className="w-full h-full bg-mesh-dark rounded-full flex items-center justify-center">
-                    <p className="text-white text-center font-semibold px-4">
-                      Awesome builder without limitations
-                    </p>
+              {/* Row 2: Content (items will be vertically centered by md:items-center) */}
+              <div className="flex flex-col md:flex-row items-stretch md:items-center justify-around space-y-8 md:space-y-0 md:space-x-2 lg:space-x-4"> {/* md:items-center for vertical alignment */}
+                {/* Content Column 1: Propose List */}
+                <div className="w-full md:w-1/3 px-2 md:px-4"> {/* Adjusted padding */}
+                  <ul className="space-y-2 text-gray-300 text-left">
+                    <li>A vibrant community</li>
+                    <li>Opportunities</li>
+                    <li>Teammates</li>
+                    <li>Tools</li>
+                    <li>Mentorship</li>
+                    <li>Office space</li>
+                    <li>A testing platform to showcase your work</li>
+                    <li>Initial steps within our engineer-led community</li>
+                  </ul>
+                </div>
+
+                {/* Content Column 2: Circle */}
+                <div className="w-full md:w-1/3 flex justify-center px-2 md:px-4"> {/* Ensured it takes up 1/3 width for balance */}
+                  <div className="w-48 h-48 p-1 rounded-full bg-gradient-to-r from-mesh-teal to-mesh-blue flex items-center justify-center shadow-lg">
+                    <div className="w-full h-full bg-mesh-dark rounded-full flex items-center justify-center">
+                      <p className="text-white text-center font-semibold px-4">
+                        Awesome builder without limitations
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* What we require */}
-              <div className="w-full md:w-1/3 p-6 bg-mesh-dark-secondary rounded-lg shadow-lg text-center min-h-[200px] md:min-h-full flex flex-col"> {/* Added flex flex-col */}
-                <h4 className="text-xl font-semibold text-mesh-teal mb-4 uppercase tracking-wider">
-                  What we require
-                </h4>
-                <div className="flex-grow flex items-center justify-center"> {/* Wrapper for Dedication to center it */}
-                  <p className="text-gray-300 text-2xl font-bold">Dedication</p>
+                {/* Content Column 3: Require Dedication */}
+                <div className="w-full md:w-1/3 px-2 md:px-4"> {/* Column container for "require" list */}
+                  <ul className="space-y-2 text-gray-300 text-right"> {/* Text within li will be right-aligned */}
+                    
+                    <li>Building something bold</li>
+                    <li>Frequent communication</li>
+                    <li>Dedication</li>
+                    <li>Activity inside the community</li>
+                  </ul>
                 </div>
-              </div>
-            </div>
+              </div> {/* Closing tag for Row 2: Content */}
+            </div> {/* Closing tag for New 2-Row Structure (space-y-8) */}
 
             <p className="pt-12 text-center">
               {/* Centered the paragraph and increased pt */}
