@@ -77,8 +77,8 @@ const AboutSection = () => {
           >
             {/* Value Proposition Section */}
             <div className="text-center mb-10">
-              <h3 className="text-2xl font-semibold text-mesh-teal uppercase tracking-wider">
-                Value Proposition
+              <h3 className="text-2xl font-semibold text-mesh-teal tracking-wider">
+                THE equation
               </h3>
             </div>
 
@@ -91,8 +91,10 @@ const AboutSection = () => {
                     What we propose
                   </h4>
                 </div>
-                <div className="w-full md:w-1/3 px-2 md:px-4 hidden md:block">
-                  {/* Spacer for the middle column's title area (circle column) */}
+                <div className="w-full md:w-1/3 px-2 md:px-4 text-center"> {/* Adjusted padding and added text-center for the new title */}
+                  <h4 className="text-xl font-semibold text-mesh-teal uppercase tracking-wider hidden md:block">
+                    {/* Result: */}
+                  </h4>
                 </div>
                 <div className="w-full md:w-1/3 px-2 md:px-4"> {/* Adjusted padding */}
                   <h4 className="text-xl font-semibold text-mesh-teal uppercase tracking-wider">
@@ -118,7 +120,10 @@ const AboutSection = () => {
                 </div>
 
                 {/* Content Column 2: Circle */}
-                <div className="w-full md:w-1/3 flex justify-center px-2 md:px-4"> {/* Ensured it takes up 1/3 width for balance */}
+                <div className="w-full md:w-1/3 flex flex-col items-center justify-center px-2 md:px-4"> {/* Added flex-col and items-center for title */}
+                  <h4 className="text-xl font-semibold text-mesh-teal uppercase tracking-wider md:hidden mb-4"> {/* Visible on mobile, margin bottom */}
+                    Result:
+                  </h4>
                   <div className="w-48 h-48 p-1 rounded-full bg-gradient-to-r from-mesh-teal to-mesh-blue flex items-center justify-center shadow-lg">
                     <div className="w-full h-full bg-mesh-dark rounded-full flex items-center justify-center">
                       <p className="text-white text-center font-semibold px-4">
@@ -130,11 +135,10 @@ const AboutSection = () => {
 
                 {/* Content Column 3: Require Dedication */}
                 <div className="w-full md:w-1/3 px-2 md:px-4"> {/* Column container for "require" list */}
-                  <ul className="space-y-2 text-gray-300 text-right"> {/* Text within li will be right-aligned */}
-                    
+                  <ul className="space-y-2 text-gray-300 text-left"> {/* Text within li will be right-aligned */}
+                    <li>Dedication</li>
                     <li>Building something bold</li>
                     <li>Frequent communication</li>
-                    <li>Dedication</li>
                     <li>Activity inside the community</li>
                   </ul>
                 </div>
