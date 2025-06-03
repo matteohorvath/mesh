@@ -77,8 +77,8 @@ const AboutSection = () => {
           >
             {/* Value Proposition Section */}
             <div className="text-center mb-10">
-              <h3 className="text-2xl font-semibold text-mesh-teal tracking-wider">
-                THE equation
+              <h3 className="text-2xl font-semibold uppercase text-mesh-teal tracking-wider">
+                the equation
               </h3>
             </div>
 
