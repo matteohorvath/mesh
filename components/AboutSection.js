@@ -124,13 +124,20 @@ const AboutSection = () => {
                   <h4 className="text-xl font-semibold text-mesh-teal uppercase tracking-wider md:hidden mb-4"> {/* Visible on mobile, margin bottom */}
                     Result:
                   </h4>
-                  <div className="w-48 h-48 p-1 rounded-full bg-gradient-to-r from-mesh-teal to-mesh-blue flex items-center justify-center shadow-lg">
-                    <div className="w-full h-full bg-mesh-dark rounded-full flex items-center justify-center">
-                      <p className="text-white text-center font-semibold px-4">
-                        Awesome builder without limitations
-                      </p>
+                  <a
+                    href="https://growmesh.notion.site/5af905687aec4e759c55744f5c08c7eb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group" // Added for potential group-hover scenarios if needed, and to scope transitions
+                  >
+                    <div className="w-48 h-48 p-1 rounded-full bg-gradient-to-r from-mesh-teal to-mesh-blue flex items-center justify-center shadow-lg transform transition-all duration-1000 ease-in group-hover:scale-110 group-hover:rotate-[720deg]"> {/* Increased duration, changed to ease-in, and increased rotation to 720deg */}
+                      <div className="w-full h-full bg-mesh-dark rounded-full flex items-center justify-center">
+                        <p className="text-white text-center font-semibold px-4 transform transition-all duration-1000 ease-in group-hover:-rotate-[720deg]"> {/* Added transform, transition, and counter-rotation on group-hover */}
+                          Awesome builder without limitations
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
 
                 {/* Content Column 3: Require Dedication */}
