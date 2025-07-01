@@ -20,29 +20,33 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="relative h-screen w-full flex flex-col md:flex-row overflow-hidden bg-mesh-dark w-full">
-        {/* Right Column (Image) - Positioned behind on mobile, beside on desktop */}
-
-        {/* Left Column (Text) - Now positioned at bottom on mobile */}
+      <section className="relative h-screen w-full flex flex-col md:flex-row overflow-hidden bg-mesh-dark">
+        {/* Left Column (Text) */}
         <div className="w-full md:w-1/2 lg:w-2/5 bg-transparent md:bg-mesh-dark flex flex-col justify-end md:justify-center items-start p-6 pb-16 md:pb-6 md:p-16 z-10 h-full">
           <div className="max-w-xl">
             <h1
               className={cn(
-                "text-5xl md:text-6xl lg:text-7xl font-bold font-monda text-white leading-tight mb-8 relative overflow-hidden",
+                "text-5xl md:text-6xl lg:text-7xl font-bold font-monda text-white leading-tight mb-4 relative overflow-hidden",
                 isLoaded ? "opacity-100" : "opacity-0",
                 "transition-opacity duration-500 delay-300"
               )}
             >
-              mesh. is a hackerlab
+              build the{" "}
               <br />
-              where we seek and develop
-              <br />
-              talent.
+              <TextAnimation
+                strings={TEXT_STRINGS}
+                waitTime={WAIT_TIME}
+                stepTime={STEP_TIME}
+              />
+              <br /> you want
             </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              mesh. is a hackerlab where we seek and develop talent.
+            </p>
 
             <div
               className={cn(
-                "transition-all duration-500 delay-700",
+                "w-full flex justify-start transition-all duration-500 delay-700",
                 isLoaded
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"

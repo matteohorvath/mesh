@@ -44,28 +44,7 @@ const AboutSection = () => {
     >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2
-            className={cn(
-              "text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-16 transition-all duration-700",
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            )}
-          >
-            <span className="reveal-text reveal-delay-1 block">build the</span>
-            <span className="reveal-text reveal-delay-2 block">
-              <span className="rotate-animation text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
-                {
-                  <TextAnimation
-                    strings={TEXT_STRINGS}
-                    waitTime={WAIT_TIME}
-                    stepTime={STEP_TIME}
-                  />
-                }
-              </span>
-            </span>
-            <span className="reveal-text reveal-delay-3 block">you want.</span>
-          </h2>
+          
 
           <div
             className={cn(
