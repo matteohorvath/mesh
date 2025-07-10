@@ -9,10 +9,6 @@ const cn = (...classes) => {
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const TEXT_STRINGS = ["company", "project", "idea", "reality"];
-  const WAIT_TIME = 2; // seconds
-  const STEP_TIME = 0.1; // seconds
 
   useEffect(() => {
     setIsLoaded(true);
@@ -21,25 +17,49 @@ const HeroSection = () => {
   return (
     <>
       <section className="relative h-screen w-full flex flex-col md:flex-row overflow-hidden bg-mesh-dark w-full">
-        {/* Right Column (Image) - Positioned behind on mobile, beside on desktop */}
-
-        {/* Left Column (Text) - Now positioned at bottom on mobile */}
-        <div className="w-full md:w-1/2 lg:w-2/5 bg-transparent md:bg-mesh-dark flex flex-col justify-end md:justify-center items-start p-6 pb-16 md:pb-6 md:p-16 z-10 h-full">
+        {/* Left Column (Text) */}
+        <div className="w-full md:w-1/2 lg:w-2/5 bg-transparent md:bg-mesh-dark flex flex-col justify-center items-start p-6 md:p-16 z-10 h-full relative">
           <div className="max-w-xl">
+            {/* Dream it. Build it. tagline */}
+            <div
+              className={cn(
+                "transition-all duration-500 delay-100",
+                isLoaded
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              )}
+            >
+              <p className="text-white/90 text-xl md:text-2xl font-light tracking-wide mb-8 font-monda">
+                dream it. build it.
+              </p>
+            </div>
+
+            {/* Main heading - mesh. */}
             <h1
               className={cn(
-                "text-5xl md:text-6xl lg:text-7xl font-bold font-monda text-white leading-tight mb-8 relative overflow-hidden",
+                "text-6xl md:text-7xl lg:text-8xl font-bold font-monda text-white leading-tight mb-8 relative overflow-hidden",
                 isLoaded ? "opacity-100" : "opacity-0",
                 "transition-opacity duration-500 delay-300"
               )}
             >
-              mesh. is a hackerlab
-              <br />
-              where we seek and develop
-              <br />
-              talent.
+              mesh.
             </h1>
 
+            {/* Subtitle */}
+            <div
+              className={cn(
+                "transition-all duration-500 delay-500",
+                isLoaded
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              )}
+            >
+              <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed mb-12 max-w-md">
+                We&apos;re a hackerlab where we seek and develop talent.
+              </p>
+            </div>
+
+            {/* CTA Button */}
             <div
               className={cn(
                 "transition-all duration-500 delay-700",
@@ -53,14 +73,6 @@ const HeroSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-gradient-to-r from-mesh-blue to-mesh-teal text-white py-4 px-8 text-lg font-monda uppercase tracking-wider hover:from-mesh-blue hover:to-mesh-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-mesh-teal focus:ring-offset-2 focus:ring-offset-black rounded-md shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                /*onClick={(e) => {
-                  e.preventDefault();
-                  const aboutSection = document.getElementById("contact");
-                  if (aboutSection) {
-                    aboutSection.scrollIntoView({ behavior: "smooth" });
-                    window.history.pushState(null, null, "#contact");
-                  }
-                }}*/
               >
                 <span>start building</span>
                 <svg
@@ -78,7 +90,19 @@ const HeroSection = () => {
               </Link>
             </div>
           </div>
+
+          {/* 2025 text positioned at bottom left */}
+          <div
+            className={cn(
+              "absolute bottom-6 md:bottom-16 left-6 md:left-16 transition-all duration-500 delay-900",
+              isLoaded
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            )}
+          ></div>
         </div>
+
+        {/* Right Column (Image) */}
         <div className="absolute inset-0 md:relative w-full md:w-1/2 lg:w-3/5 h-screen">
           <div className="absolute inset-0 bg-black/70 md:bg-black/50 md:hidden z-[1]"></div>
           <AnimatedImage

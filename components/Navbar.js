@@ -122,9 +122,7 @@ const Navbar = () => {
             href="/"
             className="text-white font-monda font-bold text-xl tracking-wider"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-mesh-blue to-mesh-teal">
-              mesh.
-            </span>
+            <span className="text-white">dream it. build it.</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -9,12 +9,12 @@ export default {
     extend: {
       colors: {
         day: {
-          DEFAULT: config.lightBackground || "#ffffff",
+          DEFAULT: config.lightBackground || "#232323",
         },
         night: {
-          DEFAULT: config.darkBackground || "#111827",
+          DEFAULT: config.darkBackground || "#232323",
         },
-        "mesh-dark": "#050505",
+        "mesh-dark": "#232323",
         "mesh-blue": "#003BD2",
         "mesh-teal": "#27EED6",
       },
@@ -32,7 +32,7 @@ export default {
         ],
       },
       backgroundImage: {
-        "mesh-gradient": "linear-gradient(to right, #003BD2, #27EED6)",
+        "mesh-gradient": "linear-gradient(to right, #232323, #232323)",
       },
     },
   },
