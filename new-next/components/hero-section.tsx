@@ -62,8 +62,8 @@ const HeroSection = () => {
                   : "opacity-0 translate-y-10"
               }`}
             >
-              {`We're a hackerlab where we seek and develop talent through hands-on building. 
-              Join our community-driven approach to learning and creating.`}
+              We&apos;re a hackerlab where we seek and develop talent through
+              hands-on building.
             </p>
           </div>
 
