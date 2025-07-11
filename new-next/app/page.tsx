@@ -1,4 +1,5 @@
 import HeroSection from "@/components/hero-section";
+import AboutSection from "@/components/about-section";
 
 export default function Home() {
   return (
@@ -6,20 +7,7 @@ export default function Home() {
       <HeroSection />
 
       {/* Placeholder sections for future development */}
-      <section
-        id="about"
-        className="min-h-screen flex items-center justify-center bg-card/30"
-      >
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            About mesh
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Coming soon: Learn more about our philosophy, values, and what makes
-            mesh unique.
-          </p>
-        </div>
-      </section>
+      <AboutSection />
 
       <section
         id="join"

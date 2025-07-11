@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Zap, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const HeroSection = () => {
@@ -37,10 +37,10 @@ const HeroSection = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center grid grid-cols-2">
-        <div className="space-y-8">
+      <div className="relative z-10  mx-auto px-4 sm:px-6 lg:px-8 text-center grid md:grid-cols-2">
+        <div className="space-y-8 items-center justify-center flex flex-col mt-16 sm:mt-0">
           {/* Main tagline */}
-          <div className="space-y-4">
+          <div className="space-y-4 ">
             <h1
               className={`text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight transition-all duration-1000 ${
                 mounted
@@ -67,39 +67,6 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Feature highlights */}
-          <div
-            className={`grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-500 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-          >
-            <div className="flex flex-col items-center space-y-2 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
-              <Code className="h-8 w-8 text-primary" />
-              <h3 className="font-semibold text-foreground">Learn by Doing</h3>
-              <p className="text-sm text-muted-foreground text-center">
-                {`Never met the tech? You'll learn it here through real projects.`}
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center space-y-2 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
-              <Users className="h-8 w-8 text-primary" />
-              <h3 className="font-semibold text-foreground">
-                Vibrant Community
-              </h3>
-              <p className="text-sm text-muted-foreground text-center">
-                Connect with like-minded builders and get mentorship.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center space-y-2 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
-              <Zap className="h-8 w-8 text-primary" />
-              <h3 className="font-semibold text-foreground">Build Bold</h3>
-              <p className="text-sm text-muted-foreground text-center">
-                {`70% ready is ready. We're product-first, experimentation over perfection.`}
-              </p>
-            </div>
-          </div>
-
           {/* CTA Buttons */}
           <div
             className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-1000 delay-700 ${
@@ -109,33 +76,22 @@ const HeroSection = () => {
             <Button
               size="lg"
               onClick={scrollToJoin}
-              className="bg-primary hover:bg-accent text-primary-foreground font-semibold text-lg px-8 py-4 group"
+              className="bg-primary hover:bg-accent text-primary-foreground font-semibold text-lg px-8 py-4 group mb-8"
             >
               Start Building
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => {
-                const element = document.querySelector("#about");
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg px-8 py-4"
-            >
-              Learn More
-            </Button>
           </div>
         </div>
-        <Image
-          src="/images/hero-image.png"
-          alt="Hero Image"
-          width={500}
-          height={500}
-        />
+        <div className="aspect-square max-w-[1000px] mx-auto flex items-center justify-center">
+          <Image
+            src="/images/vr_1.jpeg"
+            alt="Hero Image"
+            width={1000}
+            height={1000}
+            className="rounded-lg object-cover w-full h-full"
+          />
+        </div>
       </div>
 
       {/* Scroll indicator */}
