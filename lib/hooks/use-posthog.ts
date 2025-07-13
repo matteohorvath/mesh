@@ -12,13 +12,19 @@ export function usePostHog() {
     }
   }, []);
 
-  const capture = (event: string, properties?: Record<string, any>) => {
+  const capture = (
+    event: string,
+    properties?: Record<string, string | number | boolean | null>
+  ) => {
     if (isInitialized) {
       posthog.capture(event, properties);
     }
   };
 
-  const identify = (distinctId: string, properties?: Record<string, any>) => {
+  const identify = (
+    distinctId: string,
+    properties?: Record<string, string | number | boolean | null>
+  ) => {
     if (isInitialized) {
       posthog.identify(distinctId, properties);
     }
