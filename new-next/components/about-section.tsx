@@ -2,22 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, Zap, Heart } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const AboutSection = () => {
+const AboutSection = ({ scrollToJoin }: { scrollToJoin: () => void }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const scrollToJoin = () => {
-    const element = document.querySelector("#join");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section

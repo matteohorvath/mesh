@@ -5,24 +5,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
-const HeroSection = () => {
+const HeroSection = ({ scrollToJoin }: { scrollToJoin: () => void }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const scrollToJoin = () => {
-    const element = document.querySelector("#join");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background to-background/80"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background to-background/80 "
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-30">
@@ -83,7 +76,7 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
-        <div className="aspect-square max-w-[1000px] mx-auto flex items-center justify-center">
+        <div className="aspect-square max-w-[800px] mx-auto flex items-center justify-center">
           <Image
             src="/images/vr_1.jpeg"
             alt="Hero Image"
@@ -95,7 +88,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-bounce ">
         <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>

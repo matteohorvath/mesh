@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const Navigation = () => {
+const Navigation = ({ scrollToJoin }: { scrollToJoin: () => void }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -21,16 +21,22 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "How to Join", href: "#join" },
+    { name: "Philosophy", href: "#philosophy" },
+    { name: "The Deal", href: "#agreement" },
     { name: "Projects", href: "#projects" },
-    { name: "Community", href: "#community" },
     { name: "Events", href: "#events" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
     }
     setIsOpen(false);
   };
@@ -72,9 +78,9 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
+          <div className="hidden md:block mx-16">
             <Button
-              onClick={() => scrollToSection("#join")}
+              onClick={scrollToJoin}
               className="bg-primary hover:bg-accent text-primary-foreground font-medium"
             >
               Join mesh
@@ -114,7 +120,10 @@ const Navigation = () => {
             ))}
             <div className="pt-4">
               <Button
-                onClick={() => scrollToSection("#join")}
+                onClick={() => {
+                  scrollToJoin();
+                  setIsOpen(false);
+                }}
                 className="w-full bg-primary hover:bg-accent text-primary-foreground font-medium"
               >
                 Join mesh

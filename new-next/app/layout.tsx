@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Monda } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/navigation";
 
 const monda = Monda({
   subsets: ["latin"],
@@ -44,7 +43,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${monda.variable} font-sans antialiased`}>
-        <Navigation />
         {children}
       </body>
     </html>
