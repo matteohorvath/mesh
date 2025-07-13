@@ -25,7 +25,7 @@ export default function Home() {
   };
   return (
     <main className="mt-4">
-      <Navigation scrollToJoin={scrollToJoin} />
+      <Navigation />
       <HeroSection scrollToJoin={scrollToJoin} />
 
       {/* Placeholder sections for future development */}

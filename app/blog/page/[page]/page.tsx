@@ -7,9 +7,9 @@ import Navigation from "@/components/navigation";
 import { notFound } from "next/navigation";
 
 interface BlogPageProps {
-  params: {
+  params: Promise<{
     page: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPageProps) {
-  const page = parseInt(params.page);
+  const { page: pageParam } = await params;
+  const page = parseInt(pageParam);
 
   return {
     title: `Blog - Page ${page} - ${blogConfig.title}`,
@@ -31,7 +32,8 @@ export async function generateMetadata({ params }: BlogPageProps) {
 }
 
 export default async function BlogPagePagination({ params }: BlogPageProps) {
-  const page = parseInt(params.page);
+  const { page: pageParam } = await params;
+  const page = parseInt(pageParam);
   const posts = await getAllPosts({ includePages: false });
 
   if (page < 2) {
@@ -49,13 +51,9 @@ export default async function BlogPagePagination({ params }: BlogPageProps) {
   const totalPosts = posts.length;
   const showNext = page * blogConfig.postsPerPage < totalPosts;
 
-  const scrollToJoin = () => {
-    // No-op for blog page
-  };
-
   return (
     <main className="min-h-screen bg-background">
-      <Navigation scrollToJoin={scrollToJoin} />
+      <Navigation />
 
       <div className="container mx-auto px-4 py-8 pt-24">
         <div className="max-w-4xl mx-auto">

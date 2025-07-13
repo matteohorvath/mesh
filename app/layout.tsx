@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     description:
       "We're a hackerlab where we seek and develop talent through hands-on building.",
   },
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

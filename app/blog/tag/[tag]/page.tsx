@@ -7,9 +7,9 @@ import Navigation from "@/components/navigation";
 import { notFound } from "next/navigation";
 
 interface TagPageProps {
-  params: {
+  params: Promise<{
     tag: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: TagPageProps) {
-  const tag = decodeURIComponent(params.tag);
+  const { tag: tagParam } = await params;
+  const tag = decodeURIComponent(tagParam);
 
   return {
     title: `Posts tagged "${tag}" - ${blogConfig.title}`,
@@ -31,26 +32,23 @@ export async function generateMetadata({ params }: TagPageProps) {
 }
 
 export default async function TagPage({ params }: TagPageProps) {
-  const tag = decodeURIComponent(params.tag);
+  const { tag: tagParam } = await params;
+  const tag = decodeURIComponent(tagParam);
   const posts = await getAllPosts({ includePages: false });
   const tags = getAllTagsFromPosts(posts as any);
 
   // Filter posts by tag
   const filteredPosts = posts.filter(
-    (post: any) => post.tags && post.tags.includes(tag),
+    (post: any) => post.tags && post.tags.includes(tag)
   );
 
   if (filteredPosts.length === 0) {
     notFound();
   }
 
-  const scrollToJoin = () => {
-    // No-op for blog page
-  };
-
   return (
     <main className="min-h-screen bg-background">
-      <Navigation scrollToJoin={scrollToJoin} />
+      <Navigation />
 
       <div className="container mx-auto px-4 py-8 pt-24">
         <div className="max-w-4xl mx-auto">
