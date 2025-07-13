@@ -3,21 +3,21 @@ const BLOG = {
   author: "mesh.",
   email: "web@growmesh.io",
   link: "https://growmesh.io",
-  description: "This gonna be an awesome website.",
-  lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
-  timezone: "Europe/Budapest", // Your Notion posts' date will be interpreted as this timezone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
-  appearance: "dark", // ['light', 'dark', 'auto'],
-  font: "sans-serif", // ['sans-serif', 'serif']
-  lightBackground: "#ffffff", // use hex value, don't forget '#' e.g #fffefc
-  darkBackground: "#18181B", // use hex value, don't forget '#'
-  path: "", // leave this empty unless you want to deploy Nobelium in a folder
-  since: 2023, // If leave this empty, current year will be used.
+  description: "Community for hackers and builders - mesh blog",
+  lang: "en-US",
+  timezone: "Europe/Budapest",
+  appearance: "dark",
+  font: "sans-serif",
+  lightBackground: "#ffffff",
+  darkBackground: "#18181B",
+  path: "/blog",
+  since: 2023,
   postsPerPage: 7,
-  sortByDate: false,
+  sortByDate: true,
   showAbout: true,
   showArchive: true,
-  autoCollapsedNavBar: false, // The automatically collapsed navigation bar
-  ogImageGenerateURL: "https://og-image-craigary.vercel.app", // The link to generate OG image, don't end with a slash
+  autoCollapsedNavBar: false,
+  ogImageGenerateURL: "https://og-image-craigary.vercel.app",
   socialLink: "https://x.com/growmesh_io",
   seo: {
     keywords: [
@@ -38,27 +38,27 @@ const BLOG = {
       "entrepreneur",
       "developer",
       "designer",
+      "blog",
     ],
-    googleSiteVerification: "", // Remove the value or replace it with your own google site verification code
+    googleSiteVerification: "",
   },
-  notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
-  notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Useful if you prefer not to make your database public
+  notionPageId: process.env.NOTION_PAGE_ID,
+  notionAccessToken: process.env.NOTION_ACCESS_TOKEN,
   analytics: {
-    provider: "", // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
+    provider: "",
     ackeeConfig: {
-      tracker: "", // e.g 'https://ackee.craigary.net/tracker.js'
-      dataAckeeServer: "", // e.g https://ackee.craigary.net , don't end with a slash
-      domainId: "", // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
+      tracker: "",
+      dataAckeeServer: "",
+      domainId: "",
     },
     gaConfig: {
-      measurementId: "", // e.g: G-XXXXXXXXXX
+      measurementId: "",
     },
   },
   comment: {
-    // support provider: gitalk, utterances, cusdis
-    provider: "", // leave it empty if you don't need any comment plugin
+    provider: "",
     gitalkConfig: {
-      repo: "", // The repository of store comments
+      repo: "",
       owner: "",
       admin: [],
       clientID: "",
@@ -69,12 +69,12 @@ const BLOG = {
       repo: "",
     },
     cusdisConfig: {
-      appId: "", // data-app-id
-      host: "https://cusdis.com", // data-host, change this if you're using self-hosted version
-      scriptSrc: "https://cusdis.com/js/cusdis.es.js", // change this if you're using self-hosted version
+      appId: "",
+      host: "https://cusdis.com",
+      scriptSrc: "https://cusdis.com/js/cusdis.es.js",
     },
   },
-  isProd: process.env.VERCEL_ENV === "production", // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
+  isProd: process.env.VERCEL_ENV === "production",
 };
-// export default BLOG
-module.exports = BLOG;
+
+export default BLOG;

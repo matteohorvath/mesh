@@ -1,145 +1,171 @@
-<img src="https://cdn.statically.io/gh/craigary/nobelium/main/Nobelium-Logo.svg" width="50" height="50">
+# Mesh Website - Development Task List
 
-# Nobelium
+**Project Goal**: Build a modern, engaging website for "mesh" - a hackerlab community that seeks and develops talent through hands-on building.
 
-A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://vercel.com?utm_source=Craigary&utm_campaign=oss).
+## 🎯 Project Overview
 
-<p>
-  <a aria-label="GitHub commit activity" href="https://github.com/craigary/nobelium/commits/main" title="GitHub commit activity">
-    <img src="https://img.shields.io/github/commit-activity/m/craigary/nobelium?style=for-the-badge">
-  </a>
-  <a aria-label="GitHub contributors" href="https://github.com/craigary/nobelium/graphs/contributors" title="GitHub contributors">
-    <img src="https://img.shields.io/github/contributors/craigary/nobelium?color=orange&style=for-the-badge">
-  </a>
-  <a aria-label="Build status" href="#" title="Build status">
-    <img src="https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=for-the-badge">
-  </a>
-  <a aria-label="Powered by Vercel" href="https://vercel.com?utm_source=Craigary&utm_campaign=oss" title="Powered by Vercel">
-    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" height="28">
-  </a>
-</p>
+Based on the provided presentation slides, this website will showcase mesh's community-driven approach to learning and building, featuring their philosophy "dream it. build it."
 
-Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
+---
 
-<details><summary>Screenshot</summary>
-<img src="https://github.com/craigary/nobelium/blob/main/desktop.png?raw=true">
-</details>
+## 📋 Development Tasks
 
-## Highlights ✨
+### 🏗️ Project Setup & Architecture
 
-**🚀 &nbsp;Fast and responsive**
 
-- Fast page render and responsive design
-- Fast static generation with efficient compiler
+- [ ] **Component architecture**
+  - [ ] Create reusable UI components (Button, Card, Container, etc.)
+  - [ ] Set up component library structure
+  - [ ] Implement responsive design system
+  - [ ] Create typography and color scheme based on slides
 
-**🤖 &nbsp;Deploy instantly**
+### 🎨 Homepage Sections
 
-- Deploy on Vercel in minutes
-- Incremental regeneration and no need to redeploy after update the content in notion
+#### 1. Hero Section
 
-**🚙 &nbsp;Fully functional**
+- [ ] **Header/Navigation**
+  - [ ] Create responsive navigation bar
+  - [ ] Add mesh logo and branding
+  - [ ] Implement smooth scroll navigation
+  
+- [ ] **Hero Banner**
+  - [ ] "dream it. build it." tagline with impactful typography
+  - [ ] Background design/animation
+  - [ ] Call-to-action button leading to join process
 
-- Comments, full width page, quick search and tag filter
-- RSS, analytics, web vital... and much more
+#### 2. Value Proposition Section
 
-**🎨 &nbsp;Easy for customization**
+- [ ] **"What we propose" vs "What we require"**
+  - [ ] Two-column layout (responsive)
+  - [ ] Animated cards for each value proposition:
+    - **We propose**: Vibrant community, Opportunities, Mentorship, Office space & tools, Testing platform, Engineer-led community
+    - **We require**: Dedication, Building something bold, Frequent communication, Community activity
+  - [ ] Interactive hover effects
+  - [ ] Bottom tagline: "this is the equation to become a great builder at mesh."
 
-- Rich config options, support English & Chinese interface
-- Built with Tailwind CSS, easy for customization
+#### 3. How to Join Section
 
-**🕸 &nbsp;Pretty URLs and SEO friendly**
+- [ ] **4-Step Process Cards**
+  - [ ] Step 1: Fill out application form and apply with a project
+  - [ ] Step 2: Take part in the onboarding talk  
+  - [ ] Step 3: Build for 8 weeks to show dedication
+  - [ ] Step 4: Get selected to gain full access to our community
+  - [ ] Prominent "start building" CTA button
+  - [ ] Add multilingual support (Hungarian text visible in slides)
 
-## Quick Start
+#### 4. Projects Showcase
 
-- Star this repo 😉
-- Duplicate [this Notion template](https://craigary.notion.site/ee99f65a23ab44f8ac80270122ee8138), and share it to the public
-- [Fork](https://github.com/craigary/nobelium/fork) this project
-- Customize `blog.config.js`
-- _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
-- Deploy on [Vercel](https://vercel.com), set following environment variables：
-  - `NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
-  - `NOTION_ACCESS_TOKEN` (Optional, not recommended): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`
-    - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered
-- **That's it!** Easy-peasy?
+- [ ] **Project Cards Grid**
+  - [ ] Implement flip cards or modal system for front/back content
+  - [ ] Start with Agroloon project:
+    - Project description about high-altitude balloon agriculture technology
+    - Project lead: Domokos Kertész
+    - Front/back card design
+  - [ ] Scalable system for adding more projects
+  - [ ] Filter/category system for different project types
 
-<details><summary>Wait for a sec, what is Page ID？</summary>
-  <img src="https://github.com/craigary/nobelium/blob/main/pageid.png?raw=true">
-</details>
+#### 5. Philosophy Section
 
-## Play With Docker
+- [ ] **"BUILD. SHARE. HELP." Header**
+- [ ] **Core Values List**
+  - [ ] "Learn it by doing. Never met the tech? You'll learn it here."
+  - [ ] "Experimentation over perfection. We're product-first. 70% ready is ready."
+  - [ ] "Community over ego. Feedback, pair-programming, shared wins."
+  - [ ] "Shared knowledge. Openness to all skill levels, no limits."
+  - [ ] "Collective ownership."
+- [ ] Animated text reveals or typing effects
+- [ ] Visual icons for each philosophy point
 
-Unofficial, thanks to [@Vaayne](https://github.com/craigary/nobelium/pull/157)'s work!
+#### 6. Community Showcase
 
-### Build Docker image yourself
-```
-# set env
-export NOTION_PAGE_ID=xxx # your NOTION_PAGE_ID
-export IMAGE=nobelium:latest
+- [ ] **"Take the next step" Section**
+  - [ ] Photo gallery showing people working
+  - [ ] "either in software" and "or in hardware" sections
+  - [ ] Responsive image grid
+  - [ ] Overlay text animations
 
-# build with docker
-docker build -t ${IMAGE} --build-arg NOTION_PAGE_ID .
+#### 7. Our Story
 
-# run with docker
-docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} nobelium:latest
-```
+- [ ] **Narrative Section**
+  - [ ] Budapest dorm cafeteria origin story
+  - [ ] Community evolution timeline
+  - [ ] "If that sounds like your kind of fun, let's build something together."
+  - [ ] "join us" CTA button
+- [ ] Storytelling animations (scroll-triggered)
+- [ ] Background imagery or illustrations
 
-### Use default docker image
-```
-# pull image
-docker pull ghcr.io/craigary/nobelium:main
+#### 8. Events Section
 
-# run with docker
-docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} ghcr.io/craigary/nobelium:main
-```
+- [ ] **Event Types Display**
+  - [ ] LECTURES, HACKATHONS, DEMO DAYS cards
+  - [ ] Event photos/imagery
+  - [ ] "Once you're a member, you'll get access to all community events..." description
+- [ ] **Upcoming Events**
+  - [ ] Dynamic events calendar/list
+  - [ ] Event registration integration
+  - [ ] Past events archive
 
-## Roadmap
+#### 9. Footer/Final CTA
 
-Check out our roadmap [here](https://craigary.notion.site/Public-Roadmap-89d184e51653445ab5b347e4efac079e)
+- [ ] **Final mesh branding**
+  - [ ] "We're a hackerlab where we seek and develop talent."
+  - [ ] Contact information
+  - [ ] Social media links
+  - [ ] Newsletter signup
 
-- [x] Better SEO
-- [x] Dark mode
-- [x] Open Graph support
-- [x] Switch to react-notion-x
-- [x] Sitemap
-- [ ] ...
+### 🎭 Interactive Features
 
-## Technical details
+- [ ] **Animations & Micro-interactions**
+  - [ ] Smooth scroll effects
+  - [ ] Card hover animations
+  - [ ] Text reveal animations
+  - [ ] Button hover states
+  - [ ] Loading animations
 
-- **Generation**: Next.js and Incremental Static Regeneration
-- **Page render**: [react-notion-x](https://github.com/NotionX/react-notion-x)
-- **Style**: Tailwind CSS and `@tailwindcss/jit` compiler
-- **Comments**: Gitalk, Cusdis and more
+### 📱 Responsive Design
 
-## FAQ
+- [ ] **Mobile-first approach**
+  - [ ] Mobile navigation (hamburger menu)
+  - [ ] Touch-friendly interactions
+  - [ ] Optimized images and loading
+- [ ] **Tablet & desktop optimization**
+- [ ] **Cross-browser testing**
 
-<details>
-  <summary>How can I change my avatar?</summary>
-  Nobelium fetches avatars from <a href="https://gravatar.com">Gravatar</a>. You need to set your avatar there with <strong>the same email address</strong> that you defined in <code>blog.config.js</code>.
-</details>
-<details>
-  <summary>My posts disappear after I set up grouping in Notion database!</summary>
-  Nobelium currently doesn’t support Notion database grouping. If you really want to manage your posts by groups, you can create views with filters instead.
-</details>
+### 🚀 Performance & SEO
 
-## Special Thanks
+- [ ] **Performance optimization**
+  - [ ] Image optimization (Next.js Image component)
+  - [ ] Lazy loading implementation
+  - [ ] Code splitting
+  - [ ] Bundle size optimization
 
-<table><tr align="left">
-  <td align="center"><a href="https://notion.so/cnotion" title="Notion CN Community"><img src="https://avatars.githubusercontent.com/u/4792552" width="64px;"alt="Notion CN Community"/></a><br/><a href="https://notion.so/cnotion" title="Notion CN Community">Notion CN Community</a></td>
-  <td align="center"><a href="https://twitter.com/SilentDepthCN" title="SilentDepth"><img src="https://avatars.githubusercontent.com/u/7194254" width="64px;" alt="yokinist"/></a><br/><a href="https://twitter.com/SilentDepthCN" title="SilentDepth">SilentDepth</a></td>
-  <td align="center"><a href="https://leerob.io/" title="Lee Robinson"><img src="https://avatars.githubusercontent.com/u/9113740" width="64px;" alt="Reynard"/></a><br/><a href="https://leerob.io" title="Lee Robinson">Lee Robinson</a></td>
-  <td align="center"><a href="https://spencerwoo.com/" title="Spencer Woo"><img src="https://avatars.githubusercontent.com/u/32114380" width="64px;" alt="Niin"/></a><br/><a href="https://spencerwoo.com" title="Spencer Woo">Spencer Woo</a></td>
-</tr></table>
+- [ ] **SEO & Accessibility**
+  - [ ] Meta tags and Open Graph
+  - [ ] Structured data
+  - [ ] Accessibility compliance (WCAG)
+  - [ ] Semantic HTML structure
 
-## Contributors
+---
 
-<table><tr align="left">
-  <td align="center"><a href="https://github.com/craigary"><img src="https://avatars.githubusercontent.com/u/10571717" width="64px;"alt="Craig Hart"/><br/><sub><b>Craig Hart</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=craigary" title="Owner" >🎫 🔧 🎨 🐛</a></td>
-  <td align="center"><a href="https://github.com/yokinist"><img src="https://avatars.githubusercontent.com/u/19779874" width="64px;" alt="yokinist"/><br/><sub><b>yokinist</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=yokinist" title="yokinist" >🔧 🐛</a></td>
-  <td align="center"><a href="https://github.com/reycn"><img src="https://avatars.githubusercontent.com/u/11225092" width="64px;" alt="Reynard"/><br/><sub><b>Reynard</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=reycn" title="Reynard" > 🎨 🐛</a></td>
-  <td align="center"><a href="https://github.com/Niinjoy"><img src="https://avatars.githubusercontent.com/u/39721307" width="64px;" alt="Niin"/><br/><sub><b>Niin</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=Niinjoy" title="Niin" >🔧 🐛</a></td>
-  <td align="center"><a href="https://github.com/ruter"><img src="https://avatars.githubusercontent.com/u/8568876" width="64px;" alt="Ruter"/><br/><sub><b>Ruter</b></sub></a><br/><a href="https://github.com/craigary/nobelium/commits?author=ruter" title="Ruter" >🔧 🐛</a></td>
-</tr></table>
+## 🎨 Design Guidelines
 
-## License
+- **Color Scheme**: Dark theme with bright accent colors (cyan/blue gradients visible in slides)
+- **Typography**: Bold, modern fonts for headings; clean sans-serif for body text
+- **Style**: Minimalist, tech-focused aesthetic with emphasis on community and building
+- **Brand Voice**: Inspiring, direct, community-focused ("dream it. build it.")
 
-The MIT License.
+## 🔄 Development Workflow
+
+1. Start with mobile-first responsive design
+2. Build components in isolation
+3. Implement sections progressively
+4. Add animations and interactions
+5. Optimize performance
+6. Test across devices and browsers
+7. Deploy and monitor
+
+---
+
+**Target Launch**: [Set your timeline]
+**Tech Stack**: Next.js 14, TypeScript, Tailwind CSS, Framer Motion
+**Deployment**: Vercel
