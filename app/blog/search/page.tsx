@@ -14,10 +14,6 @@ export default async function BlogSearchPage() {
   const posts = await getAllPosts({ includePages: false });
   const tags = getAllTagsFromPosts(posts as any);
 
-  const scrollToJoin = () => {
-    // No-op for blog page
-  };
-
   return (
     <main className="min-h-screen bg-background">
       <Navigation scrollToJoin={scrollToJoin} />

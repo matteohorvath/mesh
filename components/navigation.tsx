@@ -56,20 +56,6 @@ const Navigation = () => {
     setIsOpen(false);
   };
 
-  const handleJoinClick = () => {
-    const isOnMainPage = window.location.pathname === "/";
-
-    if (isOnMainPage) {
-      // If on main page, use the scrollToJoin function
-      scrollToJoin();
-    } else {
-      // If not on main page, navigate to index page with join hash
-      window.location.href = "/#join";
-    }
-
-    setIsOpen(false);
-  };
-
   return (
     <nav
       className={cn(
@@ -109,7 +95,9 @@ const Navigation = () => {
           {/* CTA Button - Desktop */}
           <div className="hidden md:block mx-16">
             <Button
-              onClick={handleJoinClick}
+              onClick={() => {
+                scrollToSection("#join", false);
+              }}
               className="bg-primary hover:bg-accent text-primary-foreground font-medium"
             >
               Join mesh
@@ -149,7 +137,9 @@ const Navigation = () => {
             ))}
             <div className="pt-4">
               <Button
-                onClick={handleJoinClick}
+                onClick={() => {
+                  scrollToSection("#join", false);
+                }}
                 className="w-full bg-primary hover:bg-accent text-primary-foreground font-medium"
               >
                 Join mesh

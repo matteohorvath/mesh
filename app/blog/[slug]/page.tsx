@@ -46,10 +46,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const blockMap = await getPostBlocks((post as any).id);
 
-  const scrollToJoin = () => {
-    // No-op for blog page
-  };
-
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
