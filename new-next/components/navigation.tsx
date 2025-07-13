@@ -25,6 +25,7 @@ const Navigation = ({ scrollToJoin }: { scrollToJoin: () => void }) => {
     { name: "The Deal", href: "#agreement" },
     { name: "Projects", href: "#projects" },
     { name: "Events", href: "#events" },
+    { name: "Blog", href: "/blog", external: true },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -41,13 +42,25 @@ const Navigation = ({ scrollToJoin }: { scrollToJoin: () => void }) => {
     setIsOpen(false);
   };
 
+  const handleNavClick = (item: {
+    name: string;
+    href: string;
+    external?: boolean;
+  }) => {
+    if (item.external) {
+      window.location.href = item.href;
+    } else {
+      scrollToSection(item.href);
+    }
+  };
+
   return (
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-background/80 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+          : "bg-transparent",
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +81,7 @@ const Navigation = ({ scrollToJoin }: { scrollToJoin: () => void }) => {
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item)}
                   className="text-muted-foreground hover:text-primary px-3 py-2 text-sm font-medium transition-colors"
                 >
                   {item.name}
@@ -112,7 +125,7 @@ const Navigation = ({ scrollToJoin }: { scrollToJoin: () => void }) => {
             {navItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item)}
                 className="text-muted-foreground hover:text-primary block px-3 py-2 text-base font-medium w-full text-left transition-colors"
               >
                 {item.name}
