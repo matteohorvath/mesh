@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Monda } from "next/font/google";
 import "./globals.css";
+import { PostHogProvider } from "@/components/posthog-provider";
 
 const monda = Monda({
   subsets: ["latin"],
@@ -46,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${monda.variable} font-sans antialiased`}>
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
       </body>
     </html>
   );

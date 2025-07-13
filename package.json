@@ -21,6 +21,7 @@
     "next": "15.3.5",
     "notion-client": "^6.16.0",
     "notion-utils": "^6.16.0",
+    "posthog-js": "^1.257.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
