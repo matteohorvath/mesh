@@ -1,0 +1,58 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME # Replace with your actual GitHub repo
+  branch: main # Or your default branch
+  base_url: https://api.netlify.com # Optional: for Netlify authentication
+  auth_endpoint: /oauth/authorize # Optional: for custom auth
+
+# Enable local development
+# backend:
+#   name: git-gateway
+#   branch: main
+
+# Public folder path
+public_folder: /images
+media_folder: public/images
+
+# Collections define content types
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: content/blog
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", default: "Admin" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: pages
+    label: Pages
+    folder: content/pages
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+# Site configuration
+site_url: https://your-site.com # Replace with your actual site URL
+display_url: https://your-site.com
+logo_url: /images/logo.png # Optional: add your logo
+
+# Editor configuration
+editor:
+  preview: true
+# Enable editorial workflow (optional)
+# publish_mode: editorial_workflow
