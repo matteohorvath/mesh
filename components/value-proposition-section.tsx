@@ -10,15 +10,12 @@ export default function ValuePropositionSection() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
           we&apos;re here to help you take the next step
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base">
-          we&apos;re here to help you take the next step
-        </p>
 
         <div className="flex flex-col items-center justify-center gap-8 sm:gap-12">
           {/* Software Section */}
           <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6 w-full">
             <span className="text-muted-foreground text-base sm:text-lg font-medium order-1">
-              either in software,
+              either in software
             </span>
             <div className="grid grid-cols-2 lg:flex lg:flex-row gap-2 sm:gap-4 order-2">
               <ValuePropositionImage image="/images/vr_2.jpeg" />
