@@ -30,7 +30,7 @@ const BLOG = {
       "launchpad",
       "cohort",
       "community",
-      "hackerlab",
+      "builder space",
       "budapest",
       "startup",
       "tech",

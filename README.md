@@ -1,6 +1,6 @@
 # Mesh Website - Development Task List
 
-**Project Goal**: Build a modern, engaging website for "mesh" - a hackerlab community that seeks and develops talent through hands-on building.
+**Project Goal**: Build a modern, engaging website for "mesh" - a builder space community that seeks and develops talent through hands-on building.
 
 ## 🎯 Project Overview
 
@@ -108,7 +108,7 @@ Based on the provided presentation slides, this website will showcase mesh's com
 #### 9. Footer/Final CTA
 
 - [ ] **Final mesh branding**
-  - [ ] "We're a hackerlab where we seek and develop talent."
+  - [ ] "We're a builder space where we seek and develop talent."
   - [ ] Contact information
   - [ ] Social media links
   - [ ] Newsletter signup

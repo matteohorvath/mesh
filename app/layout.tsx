@@ -11,9 +11,9 @@ const monda = Monda({
 export const metadata: Metadata = {
   title: "mesh - dream it. build it.",
   description:
-    "We're a hackerlab where we seek and develop talent through hands-on building. Join our community-driven approach to learning and creating.",
+    "We're a builder space where we seek and develop talent through hands-on building. Join our community-driven approach to learning and creating.",
   keywords: [
-    "hackerlab",
+    "builder space",
     "community",
     "building",
     "programming",
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "mesh - dream it. build it.",
     description:
-      "We're a hackerlab where we seek and develop talent through hands-on building.",
+      "We're a builder space where we seek and develop talent through hands-on building.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "mesh - dream it. build it.",
     description:
-      "We're a hackerlab where we seek and develop talent through hands-on building.",
+      "We're a builder space where we seek and develop talent through hands-on building.",
   },
   icons: {
     icon: "/favicon.png",

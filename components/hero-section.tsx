@@ -55,8 +55,8 @@ const HeroSection = ({ scrollToJoin }: { scrollToJoin: () => void }) => {
                   : "opacity-0 translate-y-10"
               }`}
             >
-              We&apos;re a hackerlab where we seek and develop talent through
-              hands-on building.
+              We&apos;re a builder space where we seek and develop talent
+              through hands-on building.
             </p>
           </div>
 
